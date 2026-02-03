@@ -1,3 +1,0 @@
-?Binomial
-pbinom(40,44,0.92)
-1-pbinom(35,44,0.92)
