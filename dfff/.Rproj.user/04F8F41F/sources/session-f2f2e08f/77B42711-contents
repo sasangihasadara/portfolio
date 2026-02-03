@@ -1,0 +1,23 @@
+setwd("C:\\Users\\BrillianZ\\Desktop\\rrrr")
+getwd()
+
+data<-read.table("DAAta.txt", header= TRUE, sep=",")
+data
+attach(data)
+str(data)
+max(wind)
+min(wind)
+summary(temp)
+boxplot(wind,main="boxploat",horizental= TRUE)
+
+median(temp)
+mean(wind)
+sd(wind)
+IQR(wind)
+freq<-table(day,month)
+freq
+avg(temp)
+mean(temp[month=="sep"])
+count<-table(day[month=="jul"])
+count
+names(count[count==max(count)])

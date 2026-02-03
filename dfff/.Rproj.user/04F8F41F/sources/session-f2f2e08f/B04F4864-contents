@@ -1,0 +1,32 @@
+setwd("C:\\Users\\BrillianZ\\Desktop\\rrrr")
+getwd()
+
+data<-read.table("DATA 4.txt", header= TRUE, sep = "")
+data
+
+names(data)<-c("Team","attendence","salary","years")
+data
+
+attach(data)
+boxplot(attendence, main="boxplot", ylab="attendence")
+boxplot(salary, main= "boxplot", ylab="attendance",horizental=TRUE)
+boxplot(years, main= "boxplot", ylab="attendance",horizental=TRUE)
+
+
+hist(attendence,main="bargraph",ylab = "Frequency")
+abline(h=0)
+hist(salary,main="bargraph",ylab = "Frequency")
+abline(h=0)
+hist(years,main="bargraph",ylab = "Frequency")
+abline(h=0)
+stem(attendence)
+mean(attendence)
+median(attendence)
+sd(attendence)
+stem(salary)
+mean(salary)
+median(salary)
+sd(salary)
+summary(attendence)
+quantile(attendence)
+IQR(attendence)
