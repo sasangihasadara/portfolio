@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sasangi Ranasinghe | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    button:hover { color: #a78bfa; transition: color 0.3s; }
+    body { background: linear-gradient(135deg, #070b2a 0%, #0b0f3b 50%, #070b2a 100%); }
+  </style>
+</head>
+<body class="text-white">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect, useRef } = React;
+
+    function Navbar() {
+      const [open, setOpen] = useState(false);
+      return (
+        <nav className="fixed w-full top-0 z-50 bg-[#070b2a]/80 backdrop-blur border-b border-purple-500/20">
+          <div className="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+            <h1 className="text-xl font-bold text-purple-400">Portfolio</h1>
+            <div className="hidden md:flex space-x-6">
+              <a href="#home" className="hover:text-purple-400">Home</a>
+              <a href="#about" className="hover:text-purple-400">About</a>
+              <a href="#skills" className="hover:text-purple-400">Skills</a>
+              <a href="#projects" className="hover:text-purple-400">Projects</a>
+              <a href="#contact" className="hover:text-purple-400">Contact</a>
+            </div>
+            <button className="md:hidden text-white" onClick={() => setOpen(!open)}>
+              <span data-lucide="menu"></span>
+            </button>
+          </div>
+          {open && (
+            <div className="md:hidden bg-[#070b2a]/95 border-t border-purple-500/20 px-6 py-4 space-y-3">
+              <a href="#home" className="block hover:text-purple-400">Home</a>
+              <a href="#about" className="block hover:text-purple-400">About</a>
+              <a href="#skills" className="block hover:text-purple-400">Skills</a>
+              <a href="#projects" className="block hover:text-purple-400">Projects</a>
+              <a href="#contact" className="block hover:text-purple-400">Contact</a>
+            </div>
+          )}
+        </nav>
+      );
+    }
+
+    function Home() {
+      return (
+        <section id="home" className="min-h-screen flex items-center pt-20">
+          <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                Hi, I'm <br />
+                <span className="text-purple-400">Sasangi Ranasinghe</span>
+              </h1>
+              <p className="text-gray-300 mb-4">IT Student & Aspiring Full Stack Developer</p>
+              <p className="text-gray-400 max-w-lg mb-8">
+                Building functional web applications with modern technologies. Focused on smooth, user-friendly experiences.
+                Always learning and improving development skills.
+              </p>
+              <div className="flex gap-4 mb-8">
+                <a href="#contact" className="bg-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Hire Me</a>
+                <a href="files/Sasangi_CV.pdf" download className="border border-purple-500 px-6 py-3 rounded-lg hover:bg-purple-500/20">Download CV</a>
+              </div>
+              <div className="flex gap-6 text-gray-400">
+                <a href="https://github.com/sasangihasadara" className="hover:text-purple-400"><i data-lucide="github"></i></a>
+                <a href="https://www.linkedin.com/in/sasangi-ranasingha-67b35b34a/" className="hover:text-purple-400"><i data-lucide="linkedin"></i></a>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <div className="relative">
+                <div className="absolute inset-0 rounded-full bg-purple-500 blur-2xl opacity-40"></div>
+                <img src="images/sasa.jpg" alt="Sasangi" className="w-72 h-72 rounded-full object-cover object-top border-4 border-purple-500 shadow-lg" />
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    function About() {
+      return (
+        <section id="about" className="py-20 px-6">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl font-bold text-center mb-10">About Me</h2>
+            <div className="bg-[#0b0f3b] p-8 rounded-xl text-gray-300 leading-relaxed border border-purple-500/20">
+              <p>
+                I am a passionate undergraduate software developer with a strong interest in full-stack web development.
+                I enjoy building user-friendly, scalable web applications using modern technologies such as PHP, HTML, CSS,
+                JavaScript, Python, and Java. I am currently seeking an internship opportunity to gain industry experience and further
+                develop my technical skills. I am a quick learner who enjoys problem-solving, teamwork, and continuous learning.
+              </p>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    function Skills() {
+      const cards = [
+        { title: 'Frontend', items: ['HTML / CSS', 'JavaScript', 'React', 'Tailwind CSS'] },
+        { title: 'Backend', items: ['PHP', 'Node.js', 'Python', 'REST APIs'] },
+        { title: 'Mobile', items: ['Kotlin', 'Android Studio', 'UI / UX Design', 'Wireframing'] },
+        { title: 'Database & Tools', items: ['MySQL', 'Git & GitHub', 'Figma', 'VS Code'] }
+      ];
+      return (
+        <section id="skills" className="py-20 px-4 bg-slate-900/50">
+          <h2 className="text-4xl font-bold mb-12 text-center">Skills & Technologies</h2>
+          <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-6">
+            {cards.map(card => (
+              <div key={card.title} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-purple-500/20 hover:border-purple-500/50 transition-all">
+                <h3 className="text-xl font-bold text-purple-400 mb-4 flex items-center gap-2">
+                  <i data-lucide="layout" className="w-5 h-5"></i>
+                  {card.title}
+                </h3>
+                <div className="space-y-3 text-gray-300">
+                  {card.items.map(item => (
+                    <div key={item} className="flex items-center gap-3">
+                      <i data-lucide="code" className="w-5 h-5 text-purple-400"></i>
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      );
+    }
+
+    function Projects() {
+      const list = [
+        { id: 'ecommerce', title: 'E-Commerce Website', desc: 'Full-stack e-commerce website with cart and admin features.', img: 'images/bag.jpg', link: 'https://github.com/sasangihasadara/elements' },
+        { id: 'wellness', title: 'Wellness Mobile App', desc: 'Android health tracking app.', img: 'images/app.jpg', link: 'https://github.com/sasangihasadara/Wellness-App' },
+        { id: 'optical', title: 'Optical System', desc: 'Inventory and billing system for optical shops.', img: 'images/optical.jpg', link: 'https://github.com/sasangihasadara/Myproject' },
+        { id: 'exam', title: 'Online Examination System', desc: 'University project for conducting online exams.', img: 'images/exam.jpg', link: 'https://github.com/sasangihasadara/Online-Examination-System' }
+      ];
+      const [modal, setModal] = useState(null);
+      return (
+        <section id="projects" className="py-20 px-6">
+          <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+            {list.map(project => (
+              <div key={project.id} className="bg-[#0b0f3b] rounded-xl overflow-hidden border border-purple-500/20 hover:border-purple-500/50 hover:scale-[1.02] transition-all">
+                <img src={project.img} alt={project.title} className="w-full h-56 object-cover" />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-purple-400">{project.title}</h3>
+                  <p className="text-gray-400 mt-2">{project.desc}</p>
+                  <button onClick={() => setModal(project)} className="mt-4 bg-purple-600 px-5 py-2 rounded-lg hover:bg-purple-700 font-semibold">View Details</button>
+                </div>
+              </div>
+            ))}
+          </div>
+          {modal && (
+            <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+              <div className="bg-[#0b0f3b] max-w-lg w-full p-6 rounded-xl relative border border-purple-500/30">
+                <button onClick={() => setModal(null)} className="absolute top-3 right-3 text-gray-400 hover:text-white">✖</button>
+                <h3 className="text-2xl font-bold text-purple-400 mb-3">{modal.title}</h3>
+                <p className="text-gray-300 mb-4">{modal.desc}</p>
+                <p className="text-sm text-gray-400">Technologies:</p>
+                <p className="text-purple-300 mb-4">See GitHub</p>
+                <a href={modal.link} target="_blank" rel="noreferrer" className="inline-block bg-purple-600 px-4 py-2 rounded hover:bg-purple-700">View on GitHub</a>
+              </div>
+            </div>
+          )}
+        </section>
+      );
+    }
+
+    function Contact() {
+      const formRef = useRef(null);
+      const [loading, setLoading] = useState(false);
+
+      const handleSubmit = async (event) => {
+        event.preventDefault();
+        setLoading(true);
+        const formData = new FormData(formRef.current);
+        const data = Object.fromEntries(formData.entries());
+        try {
+          await window.emailjs.send('service_2q8e18o', 'template_qcb2xq8', data);
+          alert('✅ Message sent successfully!');
+          formRef.current.reset();
+        } catch (error) {
+          console.error(error);
+          alert('❌ Failed to send message. Please try again later.');
+        } finally {
+          setLoading(false);
+        }
+      };
+
+      return (
+        <section id="contact" className="py-20 bg-[#070b2a]">
+          <div className="max-w-4xl mx-auto px-6 text-center">
+            <h2 className="text-4xl font-bold mb-10">Contact Me</h2>
+            <div className="grid md:grid-cols-2 gap-10">
+              <div className="bg-[#0b0f3b] p-8 rounded-xl space-y-6 text-left border border-purple-500/20">
+                <div>
+                  <p className="text-gray-400 font-semibold">Phone</p>
+                  <p className="text-lg font-bold text-purple-400 ml-7">+94 77 230 1171</p>
+                </div>
+                <div>
+                  <p className="text-gray-400 font-semibold">Email</p>
+                  <p className="text-lg text-purple-400 font-semibold ml-7"><a href="mailto:sasangihasadara@gmail.com">sasangihasadara@gmail.com</a></p>
+                </div>
+              </div>
+              <div className="bg-[#0b0f3b] p-8 rounded-xl text-left border border-purple-500/20">
+                <h3 className="text-2xl font-bold mb-6">Send a Message</h3>
+                <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
+                  <div>
+                    <label className="block text-gray-400 font-semibold mb-2">Inquiry Type</label>
+                    <select name="inquiry_type" required className="w-full bg-white/10 text-white p-3 rounded">
+                      <option value="">Select type...</option>
+                      <option>Project</option>
+                      <option>Internship</option>
+                      <option>Job Opportunity</option>
+                      <option>Collaboration</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-gray-400 font-semibold mb-2">Your Name</label>
+                    <input name="from_name" required className="w-full bg-white/10 p-3 rounded" />
+                  </div>
+                  <div>
+                    <label className="block text-gray-400 font-semibold mb-2">Email</label>
+                    <input name="from_email" type="email" required className="w-full bg-white/10 p-3 rounded" />
+                  </div>
+                  <div>
+                    <label className="block text-gray-400 font-semibold mb-2">Subject</label>
+                    <input name="subject" required className="w-full bg-white/10 p-3 rounded" />
+                  </div>
+                  <div>
+                    <label className="block text-gray-400 font-semibold mb-2">Message</label>
+                    <textarea name="message" rows="5" required className="w-full bg-white/10 p-3 rounded"></textarea>
+                  </div>
+                  <button type="submit" className="w-full bg-purple-600 py-3 rounded-lg text-white font-bold hover:bg-purple-700">{loading ? 'Sending...' : 'Send Message'}</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    function Footer() {
+      return (
+        <footer className="py-8 text-center text-gray-400 border-t border-purple-500/20 mt-12">
+          <p>© 2026 Sasangi Ranasinghe. All rights reserved.</p>
+        </footer>
+      );
+    }
+
+    function App() {
+      useEffect(() => {
+        window.lucide && window.lucide.createIcons();
+        window.emailjs && window.emailjs.init('h7l3hvKInz5qNnRRT');
+      }, []);
+      return (
+        <>
+          <Navbar />
+          <main className="pt-16">
+            <Home />
+            <About />
+            <Skills />
+            <Projects />
+            <Contact />
+          </main>
+          <Footer />
+        </>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>
