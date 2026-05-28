@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sasangi Ranasinghe | Portfolio</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Lucide icons + EmailJS (used by original site) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      // expose lucide and emailjs to window for simple use inside React
+      window.lucide = lucide;
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+  </html>

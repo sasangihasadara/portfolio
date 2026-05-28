@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+button:hover { color: #a78bfa; transition: color 0.3s; }
+
+body { background: linear-gradient(135deg,#070b2a 0%,#0b0f3b 50%,#070b2a 100%); }
