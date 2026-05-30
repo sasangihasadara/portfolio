@@ -274,7 +274,7 @@ export const projects = [
     description: 'Inventory and billing system tailored for optical shop operations.',
     image: '/images/optical.jpg',
     github: 'https://github.com/sasangihasadara/Optical_System',
-    liveUrl: null,
+    liveUrl: 'https://portfolio-ksca-cyan.vercel.app/',
     tech: ['PHP', 'CSS', 'MySQL'],
     challenge:
       'The challenge was to support day-to-day optical shop tasks such as stock tracking, billing, and record keeping in one organized system.',

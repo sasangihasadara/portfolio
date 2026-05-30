@@ -49,6 +49,11 @@ export default function Projects() {
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
                   Project
                 </div>
+                {project.liveUrl ? (
+                  <div className="absolute bottom-3 right-3 rounded-full border border-emerald-400/25 bg-emerald-400/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.24em] text-emerald-100 backdrop-blur sm:bottom-4 sm:right-4 sm:text-[11px] sm:tracking-[0.28em]">
+                    Live Ready
+                  </div>
+                ) : null}
               </div>
               <div className="p-5 sm:p-6">
                 <h2 className="font-display text-2xl font-semibold text-white">{project.title}</h2>
