@@ -2,6 +2,13 @@ import React from 'react'
 import PageHeader from '../components/PageHeader'
 import { skillGroups } from '../data/portfolioData'
 
+function getSkillTone(level) {
+  if (level >= 90) return { from: '#ffffff', to: '#cbd5e1' }
+  if (level >= 80) return { from: '#93c5fd', to: '#e0f2fe' }
+  if (level >= 70) return { from: '#c4b5fd', to: '#f5f3ff' }
+  return { from: '#fbbf24', to: '#fef3c7' }
+}
+
 export default function Skills() {
   return (
     <section className="px-6 py-20">
@@ -40,7 +47,7 @@ export default function Skills() {
 
         <div className="grid gap-6 md:grid-cols-2">
           {skillGroups.map((group) => (
-            <div key={group.title} className="ui-card rounded-2xl p-6">
+            <div key={group.title} className="ui-card skill-card rounded-2xl p-6">
               <div className="flex items-start gap-3">
                 <div className="mt-0.5 flex h-11 w-11 items-center justify-center rounded-xl bg-white/5 text-white">
                   <i data-lucide={group.icon} className="h-5 w-5" />
@@ -56,10 +63,15 @@ export default function Skills() {
                 </div>
               </div>
 
-              <div className="mt-5 h-2 overflow-hidden rounded-full bg-white/5">
+              <div className="skill-track mt-5 h-2 rounded-full bg-white/5">
                 <div
-                  className="h-full rounded-full bg-white"
-                  style={{ width: `${group.level}%` }}
+                  className="skill-fill h-full rounded-full"
+                  style={{
+                    '--skill-width': `${group.level}%`,
+                    '--skill-hover-width': `${Math.min(group.level + 4, 100)}%`,
+                    backgroundImage: `linear-gradient(90deg, ${getSkillTone(group.level).from}, ${getSkillTone(group.level).to})`,
+                    boxShadow: `0 0 18px ${getSkillTone(group.level).from}55`,
+                  }}
                 />
               </div>
 
