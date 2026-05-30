@@ -29,20 +29,20 @@ export default function Home() {
           <div className="reveal reveal-3 flex flex-col gap-4 sm:flex-row">
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 font-semibold text-[#080b1f] transition hover:-translate-y-0.5 hover:bg-slate-200"
+              className="inline-flex w-full items-center justify-center rounded-full bg-white px-6 py-3 font-semibold text-[#080b1f] transition hover:-translate-y-0.5 hover:bg-slate-200 sm:w-auto"
             >
               <i data-lucide="send" className="mr-2 h-4 w-4" />
               Hire Me
             </Link>
             <Link
               to="/projects"
-              className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/5"
+              className="inline-flex w-full items-center justify-center rounded-full border border-white/15 px-6 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/5 sm:w-auto"
             >
               View Projects
             </Link>
             <Link
               to="/education"
-              className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 font-semibold text-slate-200 transition hover:-translate-y-0.5 hover:bg-white/5"
+              className="inline-flex w-full items-center justify-center rounded-full border border-white/15 px-6 py-3 font-semibold text-slate-200 transition hover:-translate-y-0.5 hover:bg-white/5 sm:w-auto"
             >
               Certificates
             </Link>

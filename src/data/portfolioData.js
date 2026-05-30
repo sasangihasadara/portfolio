@@ -144,8 +144,12 @@ export const projects = [
     image: '/images/bag.jpg',
     github: 'https://github.com/sasangihasadara/elements',
     tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
-    details:
-      'This project focuses on a real-world shopping experience with product browsing, cart interactions, and admin-friendly structure.',
+    challenge:
+      'The goal was to create a shopping experience that felt clear for users while still supporting backend features for managing products and orders.',
+    approach:
+      'I organized the interface around product discovery, cart flow, and simple admin-minded structure so the project stayed practical and easy to navigate.',
+    result:
+      'The final build gives a clean online shopping flow with a more complete e-commerce feel and a stronger foundation for future expansion.',
   },
   {
     id: 'wellness',
@@ -154,8 +158,12 @@ export const projects = [
     image: '/images/app.jpg',
     github: 'https://github.com/sasangihasadara/Wellness-App',
     tech: ['Kotlin', 'Android Studio', 'UI / UX'],
-    details:
-      'A concept app for health and wellness tracking that prioritizes usability, simple flows, and mobile clarity.',
+    challenge:
+      'The app needed to feel calm and easy to use so health tracking would not become overwhelming for the user.',
+    approach:
+      'I kept the layout minimal, focused on simple navigation, and used mobile-friendly patterns that make the experience feel light and direct.',
+    result:
+      'The project reads as a clear wellness concept with a strong mobile-first identity and a tidy interaction flow.',
   },
   {
     id: 'optical',
@@ -164,8 +172,12 @@ export const projects = [
     image: '/images/optical.jpg',
     github: 'https://github.com/sasangihasadara/Myproject',
     tech: ['PHP', 'CSS', 'MySQL'],
-    details:
-      'Built to support business operations such as stock handling, billing, and a structured management flow.',
+    challenge:
+      'The challenge was to support day-to-day optical shop tasks such as stock tracking, billing, and record keeping in one organized system.',
+    approach:
+      'I structured the system around business workflow so the interface could stay practical, readable, and easy to operate.',
+    result:
+      'The result is a management-style project that demonstrates how I think about real-world data entry and workflow handling.',
   },
   {
     id: 'exam',
@@ -174,7 +186,11 @@ export const projects = [
     image: '/images/exam.jpg',
     github: 'https://github.com/sasangihasadara/Online-Examination-System',
     tech: ['PHP', 'HTML', 'CSS', 'MySQL'],
-    details:
-      'A collaborative academic project designed around question handling, exam flow, and structured submission management.',
+    challenge:
+      'This project needed to support question delivery, timed exam flow, and structured submission handling in a group setting.',
+    approach:
+      'I helped shape a simple exam workflow with clear sections so users could focus on the assessment instead of the interface.',
+    result:
+      'The project shows my ability to contribute to a team-built system and organize a task-heavy workflow into a readable interface.',
   },
 ]

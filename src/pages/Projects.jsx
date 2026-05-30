@@ -11,7 +11,7 @@ export default function Projects() {
         <PageHeader
           eyebrow="Projects"
           title="Selected work"
-          description="These projects show the kind of problems I enjoy solving: practical interfaces, clear user flow, and useful back-end structure."
+          description="These projects show the kind of problems I enjoy solving: practical interfaces, clear user flow, useful back-end structure, and decisions backed by real case-study thinking."
         />
 
         <div className="grid gap-8 md:grid-cols-2">
@@ -24,6 +24,10 @@ export default function Projects() {
               <div className="p-6">
                 <h2 className="font-display text-2xl font-semibold text-white">{project.title}</h2>
                 <p className="mt-3 text-slate-300">{project.description}</p>
+                <div className="mt-4 rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">Case study</p>
+                  <p className="mt-2 text-sm leading-6 text-slate-300">{project.challenge}</p>
+                </div>
                 <div className="mt-5 flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
                     <span
@@ -37,7 +41,7 @@ export default function Projects() {
                 <div className="mt-6 flex flex-wrap gap-3">
                   <button
                     onClick={() => setModal(project)}
-                    className="rounded-full bg-white px-5 py-2.5 font-semibold text-[#080b1f] transition hover:bg-slate-200"
+                    className="w-full rounded-full bg-white px-5 py-2.5 font-semibold text-[#080b1f] transition hover:bg-slate-200 sm:w-auto"
                   >
                     View Details
                   </button>
@@ -45,7 +49,7 @@ export default function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="rounded-full border border-white/15 px-5 py-2.5 font-semibold text-white transition hover:bg-white/5"
+                    className="inline-flex w-full items-center justify-center rounded-full border border-white/15 px-5 py-2.5 font-semibold text-white transition hover:bg-white/5 sm:w-auto"
                   >
                     GitHub
                   </a>
@@ -62,7 +66,7 @@ export default function Projects() {
           onClick={() => setModal(null)}
         >
           <div
-            className="ui-card relative w-full max-w-xl rounded-2xl p-6"
+            className="ui-card relative w-full max-w-xl rounded-2xl p-5 sm:p-6"
             onClick={(event) => event.stopPropagation()}
           >
             <button
@@ -76,7 +80,22 @@ export default function Projects() {
 
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">Project details</p>
             <h3 className="font-display mt-3 text-3xl font-semibold text-white">{modal.title}</h3>
-            <p className="mt-4 text-slate-300">{modal.details}</p>
+            <p className="mt-4 text-slate-300">{modal.description}</p>
+
+            <div className="mt-6 grid gap-3 md:grid-cols-3">
+              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-400">Challenge</p>
+                <p className="mt-2 text-sm leading-6 text-slate-300">{modal.challenge}</p>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-400">Approach</p>
+                <p className="mt-2 text-sm leading-6 text-slate-300">{modal.approach}</p>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-400">Result</p>
+                <p className="mt-2 text-sm leading-6 text-slate-300">{modal.result}</p>
+              </div>
+            </div>
 
             <div className="mt-6 flex flex-wrap gap-2">
               {modal.tech.map((tech) => (
@@ -89,14 +108,23 @@ export default function Projects() {
               ))}
             </div>
 
-            <a
-              href={modal.github}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-8 inline-flex rounded-full bg-white px-5 py-3 font-semibold text-[#080b1f] transition hover:bg-slate-200"
-            >
-              View on GitHub
-            </a>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                href={modal.github}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex w-full items-center justify-center rounded-full bg-white px-5 py-3 font-semibold text-[#080b1f] transition hover:bg-slate-200 sm:w-auto"
+              >
+                View on GitHub
+              </a>
+              <button
+                type="button"
+                onClick={() => setModal(null)}
+                className="inline-flex w-full items-center justify-center rounded-full border border-white/15 px-5 py-3 font-semibold text-white transition hover:bg-white/5 sm:w-auto"
+              >
+                Close
+              </button>
+            </div>
           </div>
         </div>
       ) : null}
