@@ -18,6 +18,8 @@ export const skillGroups = [
   {
     title: 'Frontend',
     icon: 'layout-template',
+    summary: 'Responsive interfaces, clean layouts, and polished UI flows.',
+    level: 92,
     items: [
       { label: 'HTML / CSS', icon: 'code' },
       { label: 'JavaScript', icon: 'sparkles' },
@@ -28,6 +30,8 @@ export const skillGroups = [
   {
     title: 'Backend',
     icon: 'server',
+    summary: 'Practical server-side logic, forms, and API-ready thinking.',
+    level: 78,
     items: [
       { label: 'PHP', icon: 'file-code' },
       { label: 'Node.js', icon: 'braces' },
@@ -38,6 +42,8 @@ export const skillGroups = [
   {
     title: 'Mobile',
     icon: 'smartphone',
+    summary: 'Mobile UI concepts, Android workflow, and usability planning.',
+    level: 72,
     items: [
       { label: 'Kotlin', icon: 'code-xml' },
       { label: 'Android Studio', icon: 'smartphone' },
@@ -48,6 +54,8 @@ export const skillGroups = [
   {
     title: 'Database & Tools',
     icon: 'wrench',
+    summary: 'Data handling, version control, and design-to-code workflow tools.',
+    level: 84,
     items: [
       { label: 'MySQL', icon: 'database' },
       { label: 'Git & GitHub', icon: 'git-branch' },
