@@ -61,7 +61,7 @@ export default function Contact() {
 
             <div>
               <p className="flex items-center gap-2 font-semibold text-slate-400">
-                <i data-lucide="map-pin" className="h-5 w-5" />
+                <i data-lucide="map-pin" className="h-5 w-5 text-red-400" />
                 Location
               </p>
               <p className="ml-7 text-white">Colombo, Sri Lanka</p>
