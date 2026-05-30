@@ -227,7 +227,7 @@ export const projects = [
     title: 'Vehicle Service and Fuel Station Management System',
     description:
       'Web-based management system for service scheduling, fuel stock monitoring, and customer record handling.',
-    image: null,
+    image: '/images/vehicle-service-banner.svg',
     github: 'https://github.com/sasangihasadara/Online-Vehicle-Service-and-Fuel-Station-Management-System',
     tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
     challenge:
@@ -240,14 +240,14 @@ export const projects = [
   {
     id: 'ecommerce',
     title: 'E-Commerce Website',
-    description: 'Online shopping platform with a polished shopping flow and practical backend support.',
+    description: 'Online shopping platform with a polished shopping flow and MongoDB-backed backend support.',
     image: '/images/bag.jpg',
     github: 'https://github.com/sasangihasadara/Smart-_bag-_system',
-    tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
+    tech: ['HTML', 'CSS', 'JavaScript', 'MongoDB'],
     challenge:
-      'The goal was to create a shopping experience that felt clear for users while still supporting backend features for managing products and orders.',
+      'The goal was to create a shopping experience that felt clear for users while still supporting MongoDB-based data handling for products and orders.',
     approach:
-      'I organized the interface around product discovery, cart flow, and simple admin-minded structure so the project stayed practical and easy to navigate.',
+      'I organized the interface around product discovery, cart flow, and structured data handling so the project stayed practical and easy to navigate.',
     result:
       'The final build gives a clean online shopping flow with a more complete e-commerce feel and a stronger foundation for future expansion.',
   },
