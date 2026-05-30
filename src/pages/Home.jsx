@@ -27,7 +27,7 @@ export default function Home() {
             practical user experiences with React, Tailwind CSS, PHP, JavaScript, MySQL, and APIs.
           </p>
 
-          <div className="reveal reveal-3 flex flex-col gap-4 sm:flex-row">
+          <div className="reveal reveal-3 flex flex-col gap-3 sm:flex-row sm:gap-4">
             <Link
               to="/contact"
               className="inline-flex w-full items-center justify-center rounded-full bg-white px-6 py-3 font-semibold text-[#080b1f] transition hover:-translate-y-0.5 hover:bg-slate-200 sm:w-auto"
@@ -54,14 +54,14 @@ export default function Home() {
 
           <div className="reveal reveal-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
             {heroStats.map((stat) => (
-              <div key={stat.label} className="ui-card rounded-2xl p-4">
+              <div key={stat.label} className="ui-card rounded-2xl p-3 sm:p-4">
                 <p className="font-display text-2xl font-semibold text-white">{stat.value}</p>
                 <p className="mt-1 text-sm text-slate-400">{stat.label}</p>
               </div>
             ))}
           </div>
 
-          <div className="reveal reveal-4 flex flex-wrap gap-3 text-sm text-slate-300">
+          <div className="reveal reveal-4 flex flex-wrap gap-2.5 text-sm text-slate-300">
             <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2">React</span>
             <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2">Tailwind</span>
             <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2">JavaScript</span>

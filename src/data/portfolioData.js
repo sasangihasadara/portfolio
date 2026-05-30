@@ -229,6 +229,7 @@ export const projects = [
       'Web-based management system for service scheduling, fuel stock monitoring, and customer record handling.',
     image: '/images/vehicle-service-banner-v2.svg',
     github: 'https://github.com/sasangihasadara/Online-Vehicle-Service-and-Fuel-Station-Management-System',
+    liveUrl: null,
     tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
     challenge:
       'The challenge was to keep service scheduling, fuel stock monitoring, and customer records organized in one secure system.',
@@ -243,6 +244,7 @@ export const projects = [
     description: 'Online shopping platform with a polished shopping flow and MongoDB-backed backend support.',
     image: '/images/bag.jpg',
     github: 'https://github.com/sasangihasadara/Smart-_bag-_system',
+    liveUrl: null,
     tech: ['HTML', 'CSS', 'JavaScript', 'MongoDB'],
     challenge:
       'The goal was to create a shopping experience that felt clear for users while still supporting MongoDB-based data handling for products and orders.',
@@ -257,6 +259,7 @@ export const projects = [
     description: 'Android health tracking app with an approachable and clean mobile-first experience.',
     image: '/images/app.jpg',
     github: 'https://github.com/sasangihasadara/Wellness_App',
+    liveUrl: null,
     tech: ['Kotlin', 'Android Studio', 'UI / UX'],
     challenge:
       'The app needed to feel calm and easy to use so health tracking would not become overwhelming for the user.',
@@ -271,6 +274,7 @@ export const projects = [
     description: 'Inventory and billing system tailored for optical shop operations.',
     image: '/images/optical.jpg',
     github: 'https://github.com/sasangihasadara/Optical_System',
+    liveUrl: null,
     tech: ['PHP', 'CSS', 'MySQL'],
     challenge:
       'The challenge was to support day-to-day optical shop tasks such as stock tracking, billing, and record keeping in one organized system.',
@@ -285,6 +289,7 @@ export const projects = [
     description: 'University group project for conducting and managing online exams.',
     image: '/images/exam.jpg',
     github: 'https://github.com/sasangihasadara/Online-Examination-System',
+    liveUrl: null,
     tech: ['PHP', 'HTML', 'CSS', 'MySQL'],
     challenge:
       'This project needed to support question delivery, timed exam flow, and structured submission handling in a group setting.',

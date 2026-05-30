@@ -74,6 +74,16 @@ export default function Projects() {
                   >
                     View Details
                   </button>
+                  {project.liveUrl ? (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex w-full items-center justify-center rounded-full border border-emerald-400/30 bg-emerald-400/10 px-5 py-2.5 font-semibold text-emerald-100 transition hover:bg-emerald-400/15 sm:w-auto"
+                    >
+                      Live Demo
+                    </a>
+                  ) : null}
                   <a
                     href={project.github}
                     target="_blank"
@@ -138,6 +148,16 @@ export default function Projects() {
             </div>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              {modal.liveUrl ? (
+                <a
+                  href={modal.liveUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex w-full items-center justify-center rounded-full border border-emerald-400/30 bg-emerald-400/10 px-5 py-3 font-semibold text-emerald-100 transition hover:bg-emerald-400/15 sm:w-auto"
+                >
+                  Open Live Demo
+                </a>
+              ) : null}
               <a
                 href={modal.github}
                 target="_blank"
