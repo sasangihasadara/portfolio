@@ -17,15 +17,15 @@ export default function Projects() {
         <div className="grid gap-8 md:grid-cols-2">
           {projects.map((project) => (
             <article key={project.id} className="ui-card group overflow-hidden rounded-2xl">
-              <div className="relative aspect-[16/10] overflow-hidden bg-[#0b1026]">
+              <div className="relative aspect-[16/9] overflow-hidden bg-[#0b1026] sm:aspect-[16/10]">
                 {project.image ? (
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-105"
                   />
                 ) : (
-                  <div className="flex h-full w-full flex-col justify-between bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.14),_transparent_35%),linear-gradient(135deg,_rgba(59,130,246,0.24),_rgba(15,23,42,0.96))] p-6">
+                  <div className="flex h-full w-full flex-col justify-between bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.14),_transparent_35%),linear-gradient(135deg,_rgba(59,130,246,0.24),_rgba(15,23,42,0.96))] p-5 sm:p-6">
                     <div className="flex items-center justify-between">
                       <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/15 bg-white/10">
                         <i data-lucide="car-front" className="h-6 w-6 text-white" />
@@ -45,15 +45,15 @@ export default function Projects() {
                   </div>
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#070b18]/35 via-transparent to-transparent" />
-                <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full border border-white/15 bg-black/30 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-white backdrop-blur">
+                <div className="absolute left-3 top-3 flex items-center gap-2 rounded-full border border-white/15 bg-black/30 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.24em] text-white backdrop-blur sm:left-4 sm:top-4 sm:text-[11px] sm:tracking-[0.28em]">
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
                   Project
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-5 sm:p-6">
                 <h2 className="font-display text-2xl font-semibold text-white">{project.title}</h2>
-                <p className="mt-3 text-slate-300">{project.description}</p>
-                <div className="mt-4 rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                <p className="mt-3 text-sm leading-7 text-slate-300 sm:text-base">{project.description}</p>
+                <div className="mt-4 rounded-2xl border border-white/10 bg-white/[0.03] p-4 sm:p-4">
                   <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">Case study</p>
                   <p className="mt-2 text-sm leading-6 text-slate-300">{project.challenge}</p>
                 </div>
