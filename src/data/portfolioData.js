@@ -227,7 +227,7 @@ export const projects = [
     title: 'Vehicle Service and Fuel Station Management System',
     description:
       'Web-based management system for service scheduling, fuel stock monitoring, and customer record handling.',
-    image: '/images/vehicle-service-banner.svg',
+    image: '/images/vehicle-service-banner-v2.svg',
     github: 'https://github.com/sasangihasadara/Online-Vehicle-Service-and-Fuel-Station-Management-System',
     tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
     challenge:

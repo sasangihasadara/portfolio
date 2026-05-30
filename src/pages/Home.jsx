@@ -72,7 +72,7 @@ export default function Home() {
         <div className="flex justify-center lg:justify-end">
           <div className="relative">
             <div className="absolute inset-0 rounded-full bg-white/10 blur-3xl" />
-            <div className="ui-card reveal reveal-2 relative rounded-[2rem] p-4">
+            <div className="ui-card reveal reveal-2 float-slow relative rounded-[2rem] p-4">
               <img
                 src="/images/sasa.jpg"
                 alt="Sasangi Ranasinghe"

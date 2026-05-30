@@ -44,7 +44,7 @@ export default function Contact() {
                 <i data-lucide="phone" className="h-5 w-5" />
                 Phone
               </p>
-              <p className="ml-7 text-lg font-semibold text-white">+94 77 230 1171</p>
+              <p className="ml-7 text-lg font-semibold text-white">+94 76 230 1171</p>
             </div>
 
             <div>

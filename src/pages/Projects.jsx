@@ -16,32 +16,40 @@ export default function Projects() {
 
         <div className="grid gap-8 md:grid-cols-2">
           {projects.map((project) => (
-            <article
-              key={project.id}
-              className="ui-card overflow-hidden rounded-2xl"
-            >
-              {project.image ? (
-                <img src={project.image} alt={project.title} className="h-60 w-full object-cover" />
-              ) : (
-                <div className="flex h-60 w-full flex-col justify-between bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.14),_transparent_35%),linear-gradient(135deg,_rgba(59,130,246,0.24),_rgba(15,23,42,0.96))] p-6">
-                  <div className="flex items-center justify-between">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/15 bg-white/10">
-                      <i data-lucide="car-front" className="h-6 w-6 text-white" />
+            <article key={project.id} className="ui-card group overflow-hidden rounded-2xl">
+              <div className="relative aspect-[16/10] overflow-hidden bg-[#0b1026]">
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+                ) : (
+                  <div className="flex h-full w-full flex-col justify-between bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.14),_transparent_35%),linear-gradient(135deg,_rgba(59,130,246,0.24),_rgba(15,23,42,0.96))] p-6">
+                    <div className="flex items-center justify-between">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/15 bg-white/10">
+                        <i data-lucide="car-front" className="h-6 w-6 text-white" />
+                      </div>
+                      <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-white/90">
+                        New Project
+                      </span>
                     </div>
-                    <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-white/90">
-                      New Project
-                    </span>
+                    <div className="max-w-md">
+                      <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
+                        Vehicle service system
+                      </p>
+                      <h3 className="font-display mt-3 text-2xl font-semibold text-white">
+                        Service scheduling, fuel tracking, and customer records
+                      </h3>
+                    </div>
                   </div>
-                  <div className="max-w-md">
-                    <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
-                      Vehicle service system
-                    </p>
-                    <h3 className="font-display mt-3 text-2xl font-semibold text-white">
-                      Service scheduling, fuel tracking, and customer records
-                    </h3>
-                  </div>
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#070b18]/35 via-transparent to-transparent" />
+                <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full border border-white/15 bg-black/30 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-white backdrop-blur">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                  Project
                 </div>
-              )}
+              </div>
               <div className="p-6">
                 <h2 className="font-display text-2xl font-semibold text-white">{project.title}</h2>
                 <p className="mt-3 text-slate-300">{project.description}</p>

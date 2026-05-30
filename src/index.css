@@ -84,6 +84,16 @@ body::before {
   }
 }
 
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
 .reveal {
   animation: rise 0.7s ease both;
 }
@@ -119,4 +129,8 @@ body::before {
 .skill-card:hover .skill-fill {
   width: var(--skill-hover-width);
   filter: brightness(1.08);
+}
+
+.float-slow {
+  animation: floaty 8s ease-in-out infinite;
 }
