@@ -1,16 +1,83 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { NavLink, Link, useLocation } from 'react-router-dom'
+import { navLinks } from '../data/portfolioData'
 
-export default function Navbar(){
+export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false)
+  const location = useLocation()
+
+  useEffect(() => {
+    setMenuOpen(false)
+  }, [location.pathname])
+
   return (
     <nav className="fixed w-full top-0 z-50 bg-[#070b2a]/80 backdrop-blur border-b border-purple-500/20">
-      <div className="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
-        <h1 className="text-xl font-bold text-purple-400">Portfolio</h1>
-        <div className="space-x-6 hidden md:flex">
-          <Link to="/" className="hover:text-purple-400">Home</Link>
-          <Link to="/about" className="hover:text-purple-400">About</Link>
-          <Link to="/projects" className="hover:text-purple-400">Projects</Link>
-          <Link to="/contact" className="hover:text-purple-400">Contact</Link>
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
+        <Link to="/" className="text-xl font-bold tracking-wide text-purple-300">
+          Portfolio
+        </Link>
+
+        <div className="hidden items-center gap-2 lg:flex">
+          {navLinks.map((link) => (
+            <NavLink
+              key={link.to}
+              to={link.to}
+              end={link.to === '/'}
+              className={({ isActive }) =>
+                `rounded-full px-4 py-2 text-sm font-medium transition ${
+                  isActive ? 'bg-purple-500/20 text-purple-300' : 'text-gray-300 hover:text-white'
+                }`
+              }
+            >
+              {link.label}
+            </NavLink>
+          ))}
+        </div>
+
+        <button
+          type="button"
+          onClick={() => setMenuOpen((open) => !open)}
+          className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-white transition hover:bg-white/10 lg:hidden"
+          aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+        >
+          <span className="relative block h-4 w-5">
+            <span
+              className={`absolute left-0 top-0 block h-0.5 w-5 bg-current transition-transform duration-300 ${
+                menuOpen ? 'translate-y-2 rotate-45' : ''
+              }`}
+            />
+            <span
+              className={`absolute left-0 top-2 block h-0.5 w-5 bg-current transition-opacity duration-300 ${
+                menuOpen ? 'opacity-0' : ''
+              }`}
+            />
+            <span
+              className={`absolute left-0 top-4 block h-0.5 w-5 bg-current transition-transform duration-300 ${
+                menuOpen ? '-translate-y-2 -rotate-45' : ''
+              }`}
+            />
+          </span>
+        </button>
+      </div>
+
+      <div className={`border-t border-white/10 bg-[#070b2a]/95 lg:hidden ${menuOpen ? 'block' : 'hidden'}`}>
+        <div className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4">
+          {navLinks.map((link) => (
+            <NavLink
+              key={link.to}
+              to={link.to}
+              end={link.to === '/'}
+              className={({ isActive }) =>
+                `rounded-xl px-4 py-3 text-sm font-medium transition ${
+                  isActive ? 'bg-purple-500/20 text-purple-300' : 'text-gray-300 hover:bg-white/5 hover:text-white'
+                }`
+              }
+              onClick={() => setMenuOpen(false)}
+            >
+              {link.label}
+            </NavLink>
+          ))}
         </div>
       </div>
     </nav>

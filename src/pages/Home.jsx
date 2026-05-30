@@ -1,51 +1,72 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { heroStats } from '../data/portfolioData'
 
-export default function Home(){
+export default function Home() {
   return (
-    <section id="home" className="min-h-screen flex items-center pt-20">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+    <section className="relative overflow-hidden pb-20 pt-20">
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(168,85,247,0.25),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(59,130,246,0.14),_transparent_30%)]" />
+
+      <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <div>
-          <p className="text-sm uppercase tracking-[0.35em] text-purple-300 mb-4">Full Stack Developer • UI-focused • React + Tailwind</p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-            Hi, I'm <br />
-            <span className="text-purple-400">Sasangi Ranasinghe</span>
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-purple-300">
+            React Developer - Clean UI - Fast Delivery
+          </p>
+          <h1 className="max-w-2xl text-5xl font-bold leading-tight md:text-6xl">
+            Hi, I&apos;m <br />
+            <span className="text-purple-300">Sasangi Ranasinghe</span>
           </h1>
-          <p className="text-gray-300 text-lg mb-6 max-w-xl">
-            I design and build modern web applications that help businesses launch faster and provide users with clean, responsive experiences.
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-300">
+            I build responsive web applications and practical project solutions with React, Tailwind CSS, PHP,
+            JavaScript, and MySQL. My focus is on clean UI, smooth user flow, and code that is easy to grow.
           </p>
 
-          <div className="grid sm:grid-cols-3 gap-4 mb-8">
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-              <p className="text-3xl font-semibold text-purple-300">3+</p>
-              <p className="text-gray-400 mt-2 text-sm">Projects shipped</p>
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-              <p className="text-3xl font-semibold text-purple-300">React</p>
-              <p className="text-gray-400 mt-2 text-sm">Modern front-end apps</p>
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-              <p className="text-3xl font-semibold text-purple-300">Fast</p>
-              <p className="text-gray-400 mt-2 text-sm">Clean, polished UI</p>
-            </div>
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center rounded-full bg-purple-600 px-6 py-3 font-semibold text-white transition hover:bg-purple-500"
+            >
+              Hire Me
+            </Link>
+            <Link
+              to="/projects"
+              className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 font-semibold text-white transition hover:bg-white/5"
+            >
+              View Projects
+            </Link>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-8">
-            <a href="/contact" className="inline-flex items-center justify-center bg-purple-600 px-6 py-3 rounded-full font-semibold text-white hover:bg-purple-700 transition">Work with me</a>
-            <a href="files/Sasangi_CV.pdf" download className="inline-flex items-center justify-center border border-purple-500 px-6 py-3 rounded-full font-semibold text-white hover:bg-white/10 transition">Download CV</a>
+          <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
+            {heroStats.map((stat) => (
+              <div key={stat.label} className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
+                <p className="text-2xl font-bold text-white">{stat.value}</p>
+                <p className="mt-1 text-sm text-gray-400">{stat.label}</p>
+              </div>
+            ))}
           </div>
 
-          <div className="flex flex-wrap gap-3 text-sm text-gray-400">
+          <div className="mt-8 flex flex-wrap gap-3 text-sm text-gray-300">
             <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2">React</span>
-            <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2">Tailwind CSS</span>
-            <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2">Node.js</span>
-            <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2">Responsive design</span>
+            <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2">Tailwind</span>
+            <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2">JavaScript</span>
+            <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2">Responsive UI</span>
           </div>
         </div>
 
-        <div className="flex justify-center">
+        <div className="flex justify-center lg:justify-end">
           <div className="relative">
-            <div className="absolute inset-0 rounded-full bg-purple-500 blur-2xl opacity-40"></div>
-            <img src="images/sasa.jpg" alt="Sasangi" className="w-72 h-72 rounded-full object-cover object-top border-4 border-purple-500 shadow-lg" />
+            <div className="absolute inset-0 rounded-full bg-purple-500/30 blur-3xl" />
+            <div className="relative rounded-[2rem] border border-white/10 bg-white/5 p-5 shadow-2xl backdrop-blur">
+              <img
+                src="/images/sasa.jpg"
+                alt="Sasangi"
+                className="h-[18rem] w-[18rem] rounded-[1.5rem] object-cover object-top sm:h-[24rem] sm:w-[24rem]"
+              />
+            </div>
+            <div className="absolute -bottom-5 -left-5 rounded-2xl border border-white/10 bg-[#0b0f3b]/90 px-5 py-4 shadow-xl backdrop-blur">
+              <p className="text-sm text-gray-400">Open for</p>
+              <p className="text-lg font-semibold text-purple-300">Internships & Project Work</p>
+            </div>
           </div>
         </div>
       </div>
