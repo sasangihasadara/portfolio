@@ -15,14 +15,23 @@ export default function Skills() {
         <div className="ui-card mb-8 rounded-[2rem] p-6">
           <div className="grid gap-4 md:grid-cols-3">
             <div className="rounded-2xl border border-white/10 bg-[#0f132b] p-4">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-white">
+                <i data-lucide="layout-grid" className="h-5 w-5" />
+              </div>
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">Strongest area</p>
               <p className="font-display mt-2 text-xl font-semibold text-white">Frontend UI and responsive layouts</p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-[#0f132b] p-4">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-white">
+                <i data-lucide="briefcase" className="h-5 w-5" />
+              </div>
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">What I build</p>
               <p className="font-display mt-2 text-xl font-semibold text-white">Portfolio sites, student projects, and practical app interfaces</p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-[#0f132b] p-4">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-white">
+                <i data-lucide="target" className="h-5 w-5" />
+              </div>
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">Current focus</p>
               <p className="font-display mt-2 text-xl font-semibold text-white">Stronger backend flow and better project delivery</p>
             </div>
