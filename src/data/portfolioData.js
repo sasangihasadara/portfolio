@@ -119,28 +119,36 @@ export const educationItems = [
 
 export const certificateItems = [
   {
-    title: 'Add your certificate title here',
-    issuer: 'Add issuer or platform',
+    title: 'Web Design for Beginners',
+    issuer: 'Centre for Open & Distance Learning (CODL), University of Moratuwa, Sri Lanka',
     year: '2026',
-    image: null,
+    image: '/images/Screenshot 2026-05-30 224039.png',
     description:
-      'Use this section to show your completed certificates, short courses, or training badges.',
+      'Completed an online learning programme focused on the basics of web design and introductory digital layout concepts.',
   },
   {
-    title: 'Add your certificate title here',
-    issuer: 'Add issuer or platform',
+    title: 'Front-End Web Development',
+    issuer: 'Centre for Open & Distance Learning (CODL), University of Moratuwa, Sri Lanka',
     year: '2026',
-    image: null,
+    image: '/images/Screenshot 2026-05-30 224153.png',
     description:
-      'Replace this placeholder with one of your real certificates once you share the details.',
+      'Completed a front-end focused learning programme covering interface building and practical web development basics.',
   },
   {
-    title: 'Add your certificate title here',
-    issuer: 'Add issuer or platform',
+    title: 'MongoDB Node.js Developer Path',
+    issuer: 'MongoDB',
     year: '2026',
-    image: null,
+    image: '/images/Screenshot 2026-05-30 224631.png',
     description:
-      'You can list technical, academic, or professional certificates in this same layout.',
+      'Completed the MongoDB Node.js Developer Path, focusing on using MongoDB with Node.js for real application workflows.',
+  },
+  {
+    title: 'MongoDB Atlas Administrator Path',
+    issuer: 'MongoDB',
+    year: '2026',
+    image: '/images/Screenshot 2026-05-30 224702.png',
+    description:
+      'Completed the MongoDB Atlas Administrator Path, covering practical database administration and Atlas management tasks.',
   },
 ]
 
