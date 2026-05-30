@@ -12,7 +12,7 @@ export default function Home() {
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-slate-400">
             React Developer - Clean UI - Fast Delivery
           </p>
-          <h1 className="max-w-2xl text-5xl font-semibold leading-tight md:text-6xl">
+          <h1 className="font-display max-w-2xl text-5xl font-semibold leading-tight md:text-6xl">
             Hi, I&apos;m <br />
             <span className="text-white">Sasangi Ranasinghe</span>
           </h1>
@@ -38,8 +38,8 @@ export default function Home() {
 
           <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
             {heroStats.map((stat) => (
-              <div key={stat.label} className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
-                <p className="text-2xl font-semibold text-white">{stat.value}</p>
+              <div key={stat.label} className="ui-card rounded-2xl p-4">
+                <p className="font-display text-2xl font-semibold text-white">{stat.value}</p>
                 <p className="mt-1 text-sm text-slate-400">{stat.label}</p>
               </div>
             ))}
@@ -65,7 +65,7 @@ export default function Home() {
             </div>
             <div className="ui-card absolute -bottom-5 -left-5 rounded-2xl px-5 py-4">
               <p className="text-sm text-slate-400">Open for</p>
-              <p className="text-lg font-semibold text-white">Internships & Project Work</p>
+              <p className="font-display text-lg font-semibold text-white">Internships & Project Work</p>
             </div>
           </div>
         </div>
