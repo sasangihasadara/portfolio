@@ -11,19 +11,20 @@ export default function Home() {
         <div className="space-y-6">
           <div className="reveal inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-slate-300">
             <i data-lucide="sparkles" className="h-3.5 w-3.5" />
-            About Me / React / UI Design
+            SLIIT / Full-Stack Web Developer / UI Focus
           </div>
 
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-slate-400">
-            IT Student - Portfolio Builder - Open for Internships
+            Third-Year IT Undergraduate - Open for Internships
           </p>
           <h1 className="font-display reveal reveal-1 max-w-2xl text-5xl font-semibold leading-tight md:text-6xl">
             Hi, I&apos;m <br />
             <span className="text-white">Sasangi Ranasinghe</span>
           </h1>
           <p className="reveal reveal-2 max-w-2xl text-lg leading-8 text-slate-300">
-            I&apos;m an IT student who builds responsive web applications, clean interfaces, and practical project
-            solutions. I enjoy turning ideas into useful UI with React, Tailwind CSS, PHP, JavaScript, and MySQL.
+            I&apos;m a third-year Information Technology undergraduate at SLIIT with a strong interest in full-stack
+            web development. I build responsive web applications that work well across devices and focus on clean,
+            practical user experiences with React, Tailwind CSS, PHP, JavaScript, MySQL, and APIs.
           </p>
 
           <div className="reveal reveal-3 flex flex-col gap-4 sm:flex-row">
@@ -34,24 +35,20 @@ export default function Home() {
               <i data-lucide="send" className="mr-2 h-4 w-4" />
               Hire Me
             </Link>
-            <Link
-              to="/projects"
+            <a
+              href="/files/Sasangi_Ranasinghe_CV.pdf"
+              download="Sasangi_Ranasinghe_CV.pdf"
               className="inline-flex w-full items-center justify-center rounded-full border border-white/15 px-6 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/5 sm:w-auto"
             >
-              View Projects
-            </Link>
-            <Link
-              to="/education"
-              className="inline-flex w-full items-center justify-center rounded-full border border-white/15 px-6 py-3 font-semibold text-slate-200 transition hover:-translate-y-0.5 hover:bg-white/5 sm:w-auto"
-            >
-              Certificates
-            </Link>
+              <i data-lucide="download" className="mr-2 h-4 w-4" />
+              Download CV
+            </a>
           </div>
 
           <div className="reveal reveal-4 max-w-2xl rounded-3xl border border-white/10 bg-white/[0.03] p-5">
             <p className="text-sm leading-7 text-slate-300">
-              Available for internships, small freelance tasks, and student collaborations. I like projects that are
-              practical, useful, and well-finished.
+              I am looking forward to working with a software development team to gain practical industry experience
+              as a Full-Stack Web Developer. I value teamwork, communication, and learning through real project work.
             </p>
           </div>
 
