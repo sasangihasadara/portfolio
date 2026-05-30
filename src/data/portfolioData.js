@@ -122,9 +122,9 @@ export const certificateItems = [
     title: 'Web Design for Beginners',
     issuer: 'Centre for Open & Distance Learning (CODL), University of Moratuwa, Sri Lanka',
     year: '2026',
-    image: '/images/Screenshot 2026-05-30 224039.png',
+    image: '/images/Screenshot 2026-05-30 225611.png',
     description:
-      'Completed an online learning programme focused on the basics of web design and introductory digital layout concepts.',
+      'Completed an online learning programme focused on the basics of web design and introductory digital layout concepts. The certificate screenshot now shows the updated name and the final issued version.',
   },
   {
     title: 'Front-End Web Development',
