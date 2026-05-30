@@ -119,58 +119,103 @@ export const educationItems = [
 
 export const certificateItems = [
   {
-    title: 'Web Design for Beginners',
-    issuer: 'Centre for Open & Distance Learning (CODL), University of Moratuwa, Sri Lanka',
-    year: '2026',
-    image: '/images/Screenshot 2026-05-30 225611.png',
-    description:
-      'Completed an online learning programme focused on the basics of web design and introductory digital layout concepts. The certificate now shows the updated name and the final issued version.',
-  },
-  {
-    title: 'Python for Beginners',
-    issuer: 'Centre for Open & Distance Learning (CODL), University of Moratuwa, Sri Lanka',
-    year: '2025',
-    image: '/images/Screenshot 2026-05-30 230506.png',
-    description:
-      'Completed an online learning programme focused on Python fundamentals, beginner programming concepts, and practical coding basics.',
-  },
-  {
-    title: 'AI/ML Engineer - Stage 1',
-    issuer: 'Centre for Open and Distance Education, Faculty of Computing, SLIIT',
-    year: '2026',
-    image: '/images/Screenshot 2026-05-30 231325.png',
-    description:
-      'Completed the first stage of an AI and machine learning learning path focused on foundational concepts and practical progression.',
-  },
-  {
+    priority: 700,
     title: 'AI/ML Engineer - Stage 2',
     issuer: 'Centre for Open and Distance Education, Faculty of Computing, SLIIT',
     year: '2026',
     image: '/images/Screenshot 2026-05-30 231428.png',
+    issuedDate: 'Issued 2026-01-06',
+    verification: {
+      label: 'Certificate ID',
+      value: '8hv1whxcnt',
+    },
     description:
       'Completed the second stage of the AI and machine learning learning path with continued progress in structured technical study.',
   },
   {
+    priority: 690,
+    title: 'AI/ML Engineer - Stage 1',
+    issuer: 'Centre for Open and Distance Education, Faculty of Computing, SLIIT',
+    year: '2026',
+    image: '/images/Screenshot 2026-05-30 231325.png',
+    issuedDate: 'Issued 2026-01-06',
+    verification: {
+      label: 'Certificate ID',
+      value: 'lhg4aojzu4',
+    },
+    description:
+      'Completed the first stage of an AI and machine learning learning path focused on foundational concepts and practical progression.',
+  },
+  {
+    priority: 680,
+    title: 'Python for Beginners',
+    issuer: 'Centre for Open & Distance Learning (CODL), University of Moratuwa, Sri Lanka',
+    year: '2025',
+    image: '/images/Screenshot 2026-05-30 230506.png',
+    issuedDate: 'Issued 2025-12-09',
+    verification: {
+      label: 'Verification URL',
+      value: 'open.uom.lk/verify',
+      href: 'https://open.uom.lk/verify',
+    },
+    description:
+      'Completed an online learning programme focused on Python fundamentals, beginner programming concepts, and practical coding basics.',
+  },
+  {
+    priority: 670,
+    title: 'Web Design for Beginners',
+    issuer: 'Centre for Open & Distance Learning (CODL), University of Moratuwa, Sri Lanka',
+    year: '2026',
+    image: '/images/Screenshot 2026-05-30 225611.png',
+    issuedDate: 'Issued 2026-05-30',
+    verification: {
+      label: 'Verification Code',
+      value: 'kaujFybQ0d',
+      href: 'https://open.uom.lk/verify',
+    },
+    description:
+      'Completed an online learning programme focused on the basics of web design and introductory digital layout concepts. The certificate now shows the updated name and the final issued version.',
+  },
+  {
+    priority: 660,
     title: 'Front-End Web Development',
     issuer: 'Centre for Open & Distance Learning (CODL), University of Moratuwa, Sri Lanka',
     year: '2026',
     image: '/images/Screenshot 2026-05-30 224153.png',
+    issuedDate: 'Issued 2026-05-30',
+    verification: {
+      label: 'Verification Code',
+      value: 'BXiatOPcaw',
+      href: 'https://open.uom.lk/verify',
+    },
     description:
       'Completed a front-end focused learning programme covering interface building and practical web development basics.',
   },
   {
+    priority: 650,
     title: 'MongoDB Node.js Developer Path',
     issuer: 'MongoDB',
     year: '2026',
     image: '/images/Screenshot 2026-05-30 224631.png',
+    issuedDate: 'Issued 2026-01-05',
+    verification: {
+      label: 'Certificate ID',
+      value: 'MDbxuf82a9gxr',
+    },
     description:
       'Completed the MongoDB Node.js Developer Path, focusing on using MongoDB with Node.js for real application workflows.',
   },
   {
+    priority: 640,
     title: 'MongoDB Atlas Administrator Path',
     issuer: 'MongoDB',
     year: '2026',
     image: '/images/Screenshot 2026-05-30 224702.png',
+    issuedDate: 'Issued 2026-01-05',
+    verification: {
+      label: 'Certificate ID',
+      value: 'MDbwggzhb8fq',
+    },
     description:
       'Completed the MongoDB Atlas Administrator Path, covering practical database administration and Atlas management tasks.',
   },

@@ -4,6 +4,7 @@ import { certificateItems } from '../data/portfolioData'
 
 export default function Education() {
   const [selectedCertificate, setSelectedCertificate] = useState(null)
+  const orderedCertificates = [...certificateItems].sort((a, b) => (b.priority ?? 0) - (a.priority ?? 0))
 
   useEffect(() => {
     document.body.style.overflow = selectedCertificate ? 'hidden' : ''
@@ -32,39 +33,39 @@ export default function Education() {
         />
 
         <div className="mx-auto max-w-6xl">
-          <div className="ui-card rounded-[2rem] p-6 md:p-8">
-            <div className="rounded-3xl border border-white/5 bg-white/5 p-5 md:p-6">
+          <div className="ui-card rounded-[2rem] p-4 sm:p-6 md:p-8">
+            <div className="rounded-3xl border border-white/5 bg-white/5 p-4 sm:p-5 md:p-6">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">Certificates overview</p>
               <h2 className="font-display mt-3 text-3xl font-semibold text-white">
                 Clear previews, clean spacing, and full-size inspection when needed
               </h2>
               <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-300">
-                Since certificates contain a lot of text, the gallery now uses larger preview cards, object-contain
-                images, and a modal view so every detail stays readable.
+                Certificates are arranged with the newest entries first, and each card now exposes the verification
+                details directly so the information feels clear instead of hidden in the screenshot.
               </p>
             </div>
 
-            <div id="certificate-gallery" className="mt-8 grid gap-6 md:grid-cols-2">
-              {certificateItems.map((certificate, index) => (
+            <div id="certificate-gallery" className="mt-8 grid gap-5 md:grid-cols-2 md:gap-6">
+              {orderedCertificates.map((certificate, index) => (
                 <article
                   key={`${certificate.title}-${certificate.issuer}`}
-                  className={`ui-card reveal reveal-${(index % 4) + 1} overflow-hidden rounded-[1.75rem] ${index === 0 ? 'md:col-span-2' : ''}`}
+                  className={`ui-card reveal reveal-${(index % 4) + 1} overflow-hidden rounded-[1.75rem]`}
                 >
-                  <div className="grid gap-0 md:grid-cols-[minmax(280px,1.2fr)_1fr]">
+                  <div className="grid gap-0 md:grid-cols-[minmax(260px,1.08fr)_minmax(0,0.92fr)]">
                     <button
                       type="button"
                       onClick={() => setSelectedCertificate(certificate)}
-                      className="group relative block min-h-[280px] overflow-hidden border-b border-white/10 bg-[#0b1026] text-left md:min-h-[320px] md:border-b-0 md:border-r md:border-white/10"
+                      className="group relative block min-h-[250px] overflow-hidden border-b border-white/10 bg-[#0b1026] text-left sm:min-h-[280px] md:min-h-[320px] md:border-b-0 md:border-r md:border-white/10"
                     >
                       <img
                         src={encodeURI(certificate.image)}
                         alt={certificate.title}
                         loading="lazy"
                         decoding="async"
-                        className="h-full w-full object-contain p-4 transition duration-500 group-hover:scale-[1.02]"
+                        className="h-full w-full object-contain p-3 sm:p-4 transition duration-500 group-hover:scale-[1.02]"
                       />
 
-                      <div className="absolute inset-x-4 bottom-4 flex items-center justify-between rounded-2xl border border-white/10 bg-black/35 px-4 py-3 backdrop-blur">
+                      <div className="absolute inset-x-3 bottom-3 flex items-center justify-between rounded-2xl border border-white/10 bg-black/35 px-3 py-2 backdrop-blur sm:inset-x-4 sm:bottom-4 sm:px-4 sm:py-3">
                         <div>
                           <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-slate-300">
                             Click to enlarge
@@ -77,20 +78,33 @@ export default function Education() {
                       </div>
                     </button>
 
-                    <div className="flex flex-col justify-between p-5 md:p-6">
+                    <div className="flex flex-col justify-between p-4 sm:p-5 md:p-6">
                       <div>
                         <div className="flex flex-wrap gap-2">
                           <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-300">
                             {certificate.year}
                           </span>
-                          <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-300">
-                            Verified learning
-                          </span>
+                          {certificate.issuedDate ? (
+                            <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-300">
+                              {certificate.issuedDate}
+                            </span>
+                          ) : null}
                         </div>
 
                         <h3 className="font-display mt-4 text-2xl font-semibold text-white">{certificate.title}</h3>
                         <p className="mt-2 text-sm font-medium text-slate-400">{certificate.issuer}</p>
                         <p className="mt-4 max-w-xl text-sm leading-7 text-slate-300">{certificate.description}</p>
+
+                        {certificate.verification ? (
+                          <div className="mt-5 flex flex-wrap gap-2">
+                            <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-cyan-100">
+                              {certificate.verification.label}
+                            </span>
+                            <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-semibold tracking-[0.08em] text-white">
+                              {certificate.verification.value}
+                            </span>
+                          </div>
+                        ) : null}
                       </div>
 
                       <div className="mt-6 flex flex-wrap gap-3">
@@ -98,10 +112,21 @@ export default function Education() {
                           type="button"
                           onClick={() => setSelectedCertificate(certificate)}
                           className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/10"
-                        >
-                          <i data-lucide="eye" className="mr-2 h-4 w-4" />
-                          View certificate
-                        </button>
+                          >
+                            <i data-lucide="eye" className="mr-2 h-4 w-4" />
+                            View certificate
+                          </button>
+                        {certificate.verification?.href ? (
+                          <a
+                            href={certificate.verification.href}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/10"
+                          >
+                            <i data-lucide="link-2" className="mr-2 h-4 w-4" />
+                            Verify online
+                          </a>
+                        ) : null}
                       </div>
                     </div>
                   </div>
@@ -142,8 +167,8 @@ export default function Education() {
               </button>
             </div>
 
-            <div className="grid gap-0 lg:grid-cols-[1.4fr_0.9fr]">
-              <div className="flex items-center justify-center bg-black/30 p-4 md:p-6">
+            <div className="grid gap-0 lg:grid-cols-[1.25fr_0.75fr]">
+              <div className="flex items-center justify-center bg-black/30 p-3 sm:p-4 md:p-6">
                 <img
                   src={encodeURI(selectedCertificate.image)}
                   alt={selectedCertificate.title}
@@ -151,7 +176,7 @@ export default function Education() {
                 />
               </div>
 
-              <div className="border-t border-white/10 p-5 md:p-6 lg:border-l lg:border-t-0">
+              <div className="border-t border-white/10 p-4 sm:p-5 md:p-6 lg:border-l lg:border-t-0">
                 <div className="flex flex-wrap gap-2">
                   <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-300">
                     {selectedCertificate.year}
@@ -159,15 +184,41 @@ export default function Education() {
                   <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-300">
                     Certificate
                   </span>
+                  {selectedCertificate.issuedDate ? (
+                    <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-300">
+                      {selectedCertificate.issuedDate}
+                    </span>
+                  ) : null}
                 </div>
 
                 <p className="mt-5 text-sm font-medium uppercase tracking-[0.22em] text-slate-500">Issued by</p>
                 <p className="mt-2 text-base leading-7 text-slate-200">{selectedCertificate.issuer}</p>
                 <p className="mt-5 text-sm leading-7 text-slate-300">{selectedCertificate.description}</p>
 
+                {selectedCertificate.verification ? (
+                  <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4">
+                    <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-400">Verification</p>
+                    <p className="mt-3 text-sm font-medium text-slate-200">{selectedCertificate.verification.label}</p>
+                    <p className="mt-2 break-all text-base font-semibold text-white">
+                      {selectedCertificate.verification.href ? (
+                        <a
+                          href={selectedCertificate.verification.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="transition hover:text-cyan-200"
+                        >
+                          {selectedCertificate.verification.value}
+                        </a>
+                      ) : (
+                        selectedCertificate.verification.value
+                      )}
+                    </p>
+                  </div>
+                ) : null}
+
                 <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm leading-7 text-slate-300">
                   The larger preview makes the text easier to read, and the modal keeps the full certificate
-                  available without crowding the page.
+                  available without crowding the page. Newest certificates stay at the top of the gallery.
                 </div>
               </div>
             </div>

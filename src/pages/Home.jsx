@@ -11,19 +11,19 @@ export default function Home() {
         <div className="space-y-6">
           <div className="reveal inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-slate-300">
             <i data-lucide="sparkles" className="h-3.5 w-3.5" />
-            Portfolio / React / UI Design
+            About Me / React / UI Design
           </div>
 
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-slate-400">
-            React Developer - Clean UI - Fast Delivery
+            IT Student - Portfolio Builder - Open for Internships
           </p>
           <h1 className="font-display reveal reveal-1 max-w-2xl text-5xl font-semibold leading-tight md:text-6xl">
             Hi, I&apos;m <br />
             <span className="text-white">Sasangi Ranasinghe</span>
           </h1>
           <p className="reveal reveal-2 max-w-2xl text-lg leading-8 text-slate-300">
-            I build responsive web applications and practical project solutions with React, Tailwind CSS, PHP,
-            JavaScript, and MySQL. My focus is on clean UI, smooth user flow, and code that is easy to grow.
+            I&apos;m an IT student who builds responsive web applications, clean interfaces, and practical project
+            solutions. I enjoy turning ideas into useful UI with React, Tailwind CSS, PHP, JavaScript, and MySQL.
           </p>
 
           <div className="reveal reveal-3 flex flex-col gap-4 sm:flex-row">
@@ -78,7 +78,7 @@ export default function Home() {
             <div className="ui-card reveal reveal-2 relative rounded-[2rem] p-4">
               <img
                 src="/images/sasa.jpg"
-                alt="Sasangi"
+                alt="Sasangi Ranasinghe"
                 className="h-[18rem] w-[18rem] rounded-[1.5rem] object-cover object-top sm:h-[24rem] sm:w-[24rem]"
               />
             </div>
