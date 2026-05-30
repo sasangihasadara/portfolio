@@ -33,4 +33,5 @@ body {
   border-color: rgba(255, 255, 255, 0.45);
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22);
   background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-4px);
 }
