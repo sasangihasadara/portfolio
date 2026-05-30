@@ -124,7 +124,31 @@ export const certificateItems = [
     year: '2026',
     image: '/images/Screenshot 2026-05-30 225611.png',
     description:
-      'Completed an online learning programme focused on the basics of web design and introductory digital layout concepts. The certificate screenshot now shows the updated name and the final issued version.',
+      'Completed an online learning programme focused on the basics of web design and introductory digital layout concepts. The certificate now shows the updated name and the final issued version.',
+  },
+  {
+    title: 'Python for Beginners',
+    issuer: 'Centre for Open & Distance Learning (CODL), University of Moratuwa, Sri Lanka',
+    year: '2025',
+    image: '/images/Screenshot 2026-05-30 230506.png',
+    description:
+      'Completed an online learning programme focused on Python fundamentals, beginner programming concepts, and practical coding basics.',
+  },
+  {
+    title: 'AI/ML Engineer - Stage 1',
+    issuer: 'Centre for Open and Distance Education, Faculty of Computing, SLIIT',
+    year: '2026',
+    image: '/images/Screenshot 2026-05-30 231325.png',
+    description:
+      'Completed the first stage of an AI and machine learning learning path focused on foundational concepts and practical progression.',
+  },
+  {
+    title: 'AI/ML Engineer - Stage 2',
+    issuer: 'Centre for Open and Distance Education, Faculty of Computing, SLIIT',
+    year: '2026',
+    image: '/images/Screenshot 2026-05-30 231428.png',
+    description:
+      'Completed the second stage of the AI and machine learning learning path with continued progress in structured technical study.',
   },
   {
     title: 'Front-End Web Development',

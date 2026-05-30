@@ -39,8 +39,8 @@ export default function Education() {
                 Clear previews, clean spacing, and full-size inspection when needed
               </h2>
               <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-300">
-                Since certificate screenshots contain a lot of text, the gallery now uses larger preview cards,
-                object-contain images, and a modal view so every detail stays readable.
+                Since certificates contain a lot of text, the gallery now uses larger preview cards, object-contain
+                images, and a modal view so every detail stays readable.
               </p>
             </div>
 
@@ -100,7 +100,7 @@ export default function Education() {
                           className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/10"
                         >
                           <i data-lucide="eye" className="mr-2 h-4 w-4" />
-                          View full image
+                          View certificate
                         </button>
                       </div>
                     </div>
@@ -166,8 +166,8 @@ export default function Education() {
                 <p className="mt-5 text-sm leading-7 text-slate-300">{selectedCertificate.description}</p>
 
                 <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm leading-7 text-slate-300">
-                  The larger preview makes the text easier to read, and the modal keeps the full screenshot available
-                  without crowding the page.
+                  The larger preview makes the text easier to read, and the modal keeps the full certificate
+                  available without crowding the page.
                 </div>
               </div>
             </div>
