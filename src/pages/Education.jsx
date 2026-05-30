@@ -1,18 +1,9 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import PageHeader from '../components/PageHeader'
 import { certificateItems } from '../data/portfolioData'
 
 export default function Education() {
   const [selectedCertificate, setSelectedCertificate] = useState(null)
-
-  const certificateStats = useMemo(
-    () => [
-      { value: certificateItems.length.toString().padStart(2, '0'), label: 'Certificates' },
-      { value: '02', label: 'Institutions' },
-      { value: '1', label: 'Clean gallery' },
-    ],
-    [],
-  )
 
   useEffect(() => {
     document.body.style.overflow = selectedCertificate ? 'hidden' : ''
@@ -42,49 +33,15 @@ export default function Education() {
 
         <div className="mx-auto max-w-6xl">
           <div className="ui-card rounded-[2rem] p-6 md:p-8">
-            <div className="grid gap-4 md:grid-cols-3">
-              {certificateStats.map((stat, index) => (
-                <div
-                  key={stat.label}
-                  className={`reveal reveal-${index + 1} ui-card rounded-3xl p-5 ${index === 0 ? 'md:col-span-1' : ''}`}
-                >
-                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">{stat.label}</p>
-                  <p className="font-display mt-3 text-4xl font-semibold text-white">{stat.value}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-8 grid gap-4 rounded-3xl border border-white/5 bg-white/5 p-5 md:grid-cols-[1.4fr_1fr] md:p-6">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">
-                  Certificates overview
-                </p>
-                <h2 className="font-display mt-3 text-3xl font-semibold text-white">
-                  Clear previews, clean spacing, and full-size inspection when needed
-                </h2>
-                <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-300">
-                  Since certificate screenshots contain a lot of text, the gallery now uses larger preview cards,
-                  object-contain images, and a modal view so every detail stays readable.
-                </p>
-              </div>
-
-              <div className="grid gap-3 sm:grid-cols-2">
-                {certificateItems.map((certificate) => (
-                  <button
-                    key={`${certificate.title}-${certificate.issuer}`}
-                    type="button"
-                    onClick={() => setSelectedCertificate(certificate)}
-                    className="ui-card group rounded-2xl border border-white/10 bg-white/5 p-4 text-left transition hover:-translate-y-1 hover:border-white/30"
-                  >
-                    <span className="flex items-center justify-between text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-400">
-                      <span>{certificate.year}</span>
-                      <i data-lucide="expand" className="h-4 w-4 text-slate-500 transition group-hover:text-white" />
-                    </span>
-                    <p className="mt-3 font-medium text-white">{certificate.title}</p>
-                    <p className="mt-2 line-clamp-2 text-sm leading-6 text-slate-400">{certificate.issuer}</p>
-                  </button>
-                ))}
-              </div>
+            <div className="rounded-3xl border border-white/5 bg-white/5 p-5 md:p-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">Certificates overview</p>
+              <h2 className="font-display mt-3 text-3xl font-semibold text-white">
+                Clear previews, clean spacing, and full-size inspection when needed
+              </h2>
+              <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-300">
+                Since certificate screenshots contain a lot of text, the gallery now uses larger preview cards,
+                object-contain images, and a modal view so every detail stays readable.
+              </p>
             </div>
 
             <div id="certificate-gallery" className="mt-8 grid gap-6 md:grid-cols-2">
