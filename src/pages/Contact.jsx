@@ -105,7 +105,7 @@ export default function Contact() {
           </div>
 
           <div className="ui-card rounded-2xl p-8 text-left">
-            <h2 className="text-2xl font-semibold text-white">Send a Message</h2>
+            <h2 className="font-display text-2xl font-semibold text-white">Send a Message</h2>
             <form ref={formRef} onSubmit={handleSubmit} className="mt-6 space-y-4">
               <div>
                 <label className="mb-2 block font-semibold text-slate-400">Inquiry Type</label>

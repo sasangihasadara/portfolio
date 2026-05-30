@@ -22,7 +22,7 @@ export default function Skills() {
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/5 text-white">
                   <i data-lucide={group.icon} className="h-5 w-5" />
                 </div>
-                <h2 className="text-xl font-semibold text-white">{group.title}</h2>
+                <h2 className="font-display text-xl font-semibold text-white">{group.title}</h2>
               </div>
 
               <div className="mt-6 flex flex-wrap gap-3">

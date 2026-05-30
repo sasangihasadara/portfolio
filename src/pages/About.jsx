@@ -35,7 +35,7 @@ export default function About() {
           </div>
 
           <div className="ui-card rounded-2xl p-8">
-            <h2 className="text-2xl font-semibold text-white">What I bring</h2>
+            <h2 className="font-display text-2xl font-semibold text-white">What I bring</h2>
             <div className="mt-6 space-y-4 text-slate-300">
               <div className="ui-card rounded-2xl p-4">
                 Responsive UI development with a clean visual style.

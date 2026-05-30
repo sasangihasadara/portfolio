@@ -14,7 +14,7 @@ export default function Education() {
 
         <div className="mx-auto max-w-4xl">
           <div className="ui-card rounded-2xl p-6">
-            <h2 className="text-2xl font-semibold text-white">Certificates</h2>
+            <h2 className="font-display text-2xl font-semibold text-white">Certificates</h2>
             <p className="mt-3 text-sm leading-7 text-slate-400">
               Add your certificate images in the boxed area below. Each card has space for an image, title, issuer,
               and description.
@@ -45,7 +45,7 @@ export default function Education() {
                       <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">
                         {certificate.year}
                       </p>
-                      <h3 className="mt-2 text-lg font-semibold text-white">{certificate.title}</h3>
+                      <h3 className="font-display mt-2 text-lg font-semibold text-white">{certificate.title}</h3>
                       <p className="mt-1 text-sm text-slate-400">{certificate.issuer}</p>
                       <p className="mt-3 text-sm leading-6 text-slate-300">{certificate.description}</p>
                     </div>

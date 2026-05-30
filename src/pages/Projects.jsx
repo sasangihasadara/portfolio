@@ -22,7 +22,7 @@ export default function Projects() {
             >
               <img src={project.image} alt={project.title} className="h-60 w-full object-cover" />
               <div className="p-6">
-                <h2 className="text-2xl font-semibold text-white">{project.title}</h2>
+                <h2 className="font-display text-2xl font-semibold text-white">{project.title}</h2>
                 <p className="mt-3 text-slate-300">{project.description}</p>
                 <div className="mt-5 flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
@@ -75,7 +75,7 @@ export default function Projects() {
             </button>
 
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">Project details</p>
-            <h3 className="mt-3 text-3xl font-semibold text-white">{modal.title}</h3>
+            <h3 className="font-display mt-3 text-3xl font-semibold text-white">{modal.title}</h3>
             <p className="mt-4 text-slate-300">{modal.details}</p>
 
             <div className="mt-6 flex flex-wrap gap-2">

@@ -22,7 +22,7 @@ export default function Services() {
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/5 text-white">
                   <i data-lucide={service.icon} className="h-5 w-5" />
                 </div>
-                <h2 className="text-xl font-semibold text-white">{service.title}</h2>
+                <h2 className="font-display text-xl font-semibold text-white">{service.title}</h2>
               </div>
 
               <p className="mt-4 leading-7 text-slate-300">{service.description}</p>
