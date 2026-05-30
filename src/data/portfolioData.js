@@ -4,7 +4,7 @@ export const navLinks = [
   { to: '/skills', label: 'Skills' },
   { to: '/projects', label: 'Projects' },
   { to: '/services', label: 'Services' },
-  { to: '/education', label: 'Education' },
+  { to: '/education', label: 'Certificates' },
   { to: '/contact', label: 'Contact' },
 ]
 
