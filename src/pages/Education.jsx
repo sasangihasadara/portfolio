@@ -8,8 +8,8 @@ export default function Education() {
       <div className="mx-auto max-w-6xl">
         <PageHeader
           eyebrow="Education"
-          title="Learning path and next step"
-          description="My education is centered on building practical software skills, strong problem-solving habits, and the confidence to contribute in team environments."
+          title="Certificates and learning path"
+          description="My learning journey includes practical software skills, problem-solving habits, and certificates that show my growth in web development, tools, and real project work. I use each certificate as a step toward stronger technical confidence and better industry readiness."
         />
 
         <div className="mx-auto max-w-4xl">
