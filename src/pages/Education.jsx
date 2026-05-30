@@ -50,12 +50,33 @@ export default function Education() {
                     key={`${certificate.title}-${certificate.issuer}`}
                     className="ui-card rounded-2xl p-4"
                   >
-                    <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">
-                      {certificate.year}
-                    </p>
-                    <h3 className="mt-2 text-lg font-semibold text-white">{certificate.title}</h3>
-                    <p className="mt-1 text-sm text-slate-400">{certificate.issuer}</p>
-                    <p className="mt-3 text-sm leading-6 text-slate-300">{certificate.description}</p>
+                    <div className="grid gap-4 md:grid-cols-[140px_1fr] md:items-start">
+                      <div className="flex h-[140px] items-center justify-center rounded-2xl border border-dashed border-white/15 bg-[#0f132b]">
+                        {certificate.image ? (
+                          <img
+                            src={certificate.image}
+                            alt={certificate.title}
+                            className="h-full w-full rounded-2xl object-cover"
+                          />
+                        ) : (
+                          <div className="text-center">
+                            <i data-lucide="image" className="mx-auto mb-2 h-6 w-6 text-slate-400" />
+                            <p className="text-xs font-medium uppercase tracking-[0.25em] text-slate-500">
+                              Certificate Image
+                            </p>
+                          </div>
+                        )}
+                      </div>
+
+                      <div>
+                        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">
+                          {certificate.year}
+                        </p>
+                        <h3 className="mt-2 text-lg font-semibold text-white">{certificate.title}</h3>
+                        <p className="mt-1 text-sm text-slate-400">{certificate.issuer}</p>
+                        <p className="mt-3 text-sm leading-6 text-slate-300">{certificate.description}</p>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>

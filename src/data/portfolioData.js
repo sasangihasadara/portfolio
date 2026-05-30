@@ -114,6 +114,7 @@ export const certificateItems = [
     title: 'Add your certificate title here',
     issuer: 'Add issuer or platform',
     year: '2026',
+    image: null,
     description:
       'Use this section to show your completed certificates, short courses, or training badges.',
   },
@@ -121,6 +122,7 @@ export const certificateItems = [
     title: 'Add your certificate title here',
     issuer: 'Add issuer or platform',
     year: '2026',
+    image: null,
     description:
       'Replace this placeholder with one of your real certificates once you share the details.',
   },
@@ -128,6 +130,7 @@ export const certificateItems = [
     title: 'Add your certificate title here',
     issuer: 'Add issuer or platform',
     year: '2026',
+    image: null,
     description:
       'You can list technical, academic, or professional certificates in this same layout.',
   },
