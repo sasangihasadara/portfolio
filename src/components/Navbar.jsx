@@ -11,9 +11,9 @@ export default function Navbar() {
   }, [location.pathname])
 
   return (
-    <nav className="fixed w-full top-0 z-50 bg-[#070b2a]/80 backdrop-blur border-b border-purple-500/20">
+    <nav className="fixed top-0 z-50 w-full border-b border-white/10 bg-[#080b1f]/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <Link to="/" className="text-xl font-bold tracking-wide text-purple-300">
+        <Link to="/" className="text-lg font-semibold tracking-wide text-white">
           Portfolio
         </Link>
 
@@ -25,7 +25,7 @@ export default function Navbar() {
               end={link.to === '/'}
               className={({ isActive }) =>
                 `rounded-full px-4 py-2 text-sm font-medium transition ${
-                  isActive ? 'bg-purple-500/20 text-purple-300' : 'text-gray-300 hover:text-white'
+                  isActive ? 'bg-white/10 text-white' : 'text-slate-300 hover:text-white'
                 }`
               }
             >
@@ -61,7 +61,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      <div className={`border-t border-white/10 bg-[#070b2a]/95 lg:hidden ${menuOpen ? 'block' : 'hidden'}`}>
+      <div className={`border-t border-white/10 bg-[#080b1f]/95 lg:hidden ${menuOpen ? 'block' : 'hidden'}`}>
         <div className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4">
           {navLinks.map((link) => (
             <NavLink
@@ -70,7 +70,7 @@ export default function Navbar() {
               end={link.to === '/'}
               className={({ isActive }) =>
                 `rounded-xl px-4 py-3 text-sm font-medium transition ${
-                  isActive ? 'bg-purple-500/20 text-purple-300' : 'text-gray-300 hover:bg-white/5 hover:text-white'
+                  isActive ? 'bg-white/10 text-white' : 'text-slate-300 hover:bg-white/5 hover:text-white'
                 }`
               }
               onClick={() => setMenuOpen(false)}

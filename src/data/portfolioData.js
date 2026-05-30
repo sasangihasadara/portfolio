@@ -18,22 +18,42 @@ export const skillGroups = [
   {
     title: 'Frontend',
     icon: 'layout-template',
-    items: ['HTML / CSS', 'JavaScript', 'React', 'Tailwind CSS'],
+    items: [
+      { label: 'HTML / CSS', icon: 'code' },
+      { label: 'JavaScript', icon: 'sparkles' },
+      { label: 'React', icon: 'component' },
+      { label: 'Tailwind CSS', icon: 'wind' },
+    ],
   },
   {
     title: 'Backend',
     icon: 'server',
-    items: ['PHP', 'Node.js', 'Python', 'REST APIs'],
+    items: [
+      { label: 'PHP', icon: 'file-code' },
+      { label: 'Node.js', icon: 'braces' },
+      { label: 'Python', icon: 'terminal' },
+      { label: 'REST APIs', icon: 'plug' },
+    ],
   },
   {
     title: 'Mobile',
     icon: 'smartphone',
-    items: ['Kotlin', 'Android Studio', 'UI / UX Design', 'Wireframing'],
+    items: [
+      { label: 'Kotlin', icon: 'code-xml' },
+      { label: 'Android Studio', icon: 'smartphone' },
+      { label: 'UI / UX Design', icon: 'palette' },
+      { label: 'Wireframing', icon: 'pen-tool' },
+    ],
   },
   {
     title: 'Database & Tools',
     icon: 'wrench',
-    items: ['MySQL', 'Git & GitHub', 'Figma', 'VS Code'],
+    items: [
+      { label: 'MySQL', icon: 'database' },
+      { label: 'Git & GitHub', icon: 'git-branch' },
+      { label: 'Figma', icon: 'figma' },
+      { label: 'VS Code', icon: 'box' },
+    ],
   },
 ]
 

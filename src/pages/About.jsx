@@ -18,8 +18,8 @@ export default function About() {
         />
 
         <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-          <div className="rounded-[1.5rem] border border-purple-500/20 bg-[#0b0f3b] p-8 shadow-xl">
-            <p className="text-base leading-8 text-gray-300">
+          <div className="ui-card rounded-2xl p-8">
+            <p className="text-base leading-8 text-slate-300">
               I enjoy building responsive web applications with a strong attention to detail. My background includes
               PHP, HTML, CSS, JavaScript, Python, Java, MySQL, and React-based interface work. I like projects that
               blend clean design with useful functionality.
@@ -27,26 +27,23 @@ export default function About() {
 
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
               {focusPoints.map((point) => (
-                <div
-                  key={point}
-                  className="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm leading-6 text-gray-300"
-                >
+                <div key={point} className="ui-card rounded-2xl p-4 text-sm leading-6 text-slate-300">
                   {point}
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="rounded-[1.5rem] border border-purple-500/20 bg-[#0b0f3b] p-8 shadow-xl">
-            <h2 className="text-2xl font-bold text-purple-300">What I bring</h2>
-            <div className="mt-6 space-y-4 text-gray-300">
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+          <div className="ui-card rounded-2xl p-8">
+            <h2 className="text-2xl font-semibold text-white">What I bring</h2>
+            <div className="mt-6 space-y-4 text-slate-300">
+              <div className="ui-card rounded-2xl p-4">
                 Responsive UI development with a clean visual style.
               </div>
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div className="ui-card rounded-2xl p-4">
                 Practical project experience across web, mobile, and database work.
               </div>
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div className="ui-card rounded-2xl p-4">
                 A growth mindset and willingness to learn from team feedback.
               </div>
             </div>
@@ -56,4 +53,3 @@ export default function About() {
     </section>
   )
 }
-

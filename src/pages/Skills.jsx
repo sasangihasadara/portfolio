@@ -16,22 +16,23 @@ export default function Skills() {
           {skillGroups.map((group) => (
             <div
               key={group.title}
-              className="rounded-[1.5rem] border border-purple-500/20 bg-[#0b0f3b] p-6 shadow-xl transition hover:-translate-y-1 hover:border-purple-500/40"
+              className="ui-card rounded-2xl p-6"
             >
               <div className="flex items-center gap-3">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-purple-500/15 text-purple-300">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/5 text-white">
                   <i data-lucide={group.icon} className="h-5 w-5" />
                 </div>
-                <h2 className="text-xl font-bold text-white">{group.title}</h2>
+                <h2 className="text-xl font-semibold text-white">{group.title}</h2>
               </div>
 
               <div className="mt-6 flex flex-wrap gap-3">
                 {group.items.map((item) => (
                   <span
-                    key={item}
-                    className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-300"
+                    key={item.label}
+                    className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#0f132b] px-4 py-2 text-sm text-slate-300"
                   >
-                    {item}
+                    <i data-lucide={item.icon} className="h-3.5 w-3.5 text-slate-400" />
+                    <span>{item.label}</span>
                   </span>
                 ))}
               </div>
@@ -42,4 +43,3 @@ export default function Skills() {
     </section>
   )
 }
-
