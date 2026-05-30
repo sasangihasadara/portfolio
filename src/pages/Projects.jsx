@@ -20,7 +20,28 @@ export default function Projects() {
               key={project.id}
               className="ui-card overflow-hidden rounded-2xl"
             >
-              <img src={project.image} alt={project.title} className="h-60 w-full object-cover" />
+              {project.image ? (
+                <img src={project.image} alt={project.title} className="h-60 w-full object-cover" />
+              ) : (
+                <div className="flex h-60 w-full flex-col justify-between bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.14),_transparent_35%),linear-gradient(135deg,_rgba(59,130,246,0.24),_rgba(15,23,42,0.96))] p-6">
+                  <div className="flex items-center justify-between">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/15 bg-white/10">
+                      <i data-lucide="car-front" className="h-6 w-6 text-white" />
+                    </div>
+                    <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-white/90">
+                      New Project
+                    </span>
+                  </div>
+                  <div className="max-w-md">
+                    <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
+                      Vehicle service system
+                    </p>
+                    <h3 className="font-display mt-3 text-2xl font-semibold text-white">
+                      Service scheduling, fuel tracking, and customer records
+                    </h3>
+                  </div>
+                </div>
+              )}
               <div className="p-6">
                 <h2 className="font-display text-2xl font-semibold text-white">{project.title}</h2>
                 <p className="mt-3 text-slate-300">{project.description}</p>

@@ -9,7 +9,7 @@ export const navLinks = [
 ]
 
 export const heroStats = [
-  { value: '4+', label: 'Portfolio projects' },
+  { value: '5+', label: 'Portfolio projects' },
   { value: '5+', label: 'Core technologies' },
   { value: 'Open', label: 'For internships' },
 ]
@@ -223,11 +223,26 @@ export const certificateItems = [
 
 export const projects = [
   {
+    id: 'vehicle-service',
+    title: 'Vehicle Service and Fuel Station Management System',
+    description:
+      'Web-based management system for service scheduling, fuel stock monitoring, and customer record handling.',
+    image: null,
+    github: 'https://github.com/sasangihasadara/Online-Vehicle-Service-and-Fuel-Station-Management-System',
+    tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+    challenge:
+      'The challenge was to keep service scheduling, fuel stock monitoring, and customer records organized in one secure system.',
+    approach:
+      'I designed a responsive web interface with secure user authentication, structured service and fuel tracking, and clear record-management sections.',
+    result:
+      'The final system streamlines daily operations, improves data accuracy, and helps make vehicle service and fuel management more efficient.',
+  },
+  {
     id: 'ecommerce',
     title: 'E-Commerce Website',
     description: 'Online shopping platform with a polished shopping flow and practical backend support.',
     image: '/images/bag.jpg',
-    github: 'https://github.com/sasangihasadara/elements',
+    github: 'https://github.com/sasangihasadara/Smart-_bag-_system',
     tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
     challenge:
       'The goal was to create a shopping experience that felt clear for users while still supporting backend features for managing products and orders.',
@@ -241,7 +256,7 @@ export const projects = [
     title: 'Wellness Mobile App',
     description: 'Android health tracking app with an approachable and clean mobile-first experience.',
     image: '/images/app.jpg',
-    github: 'https://github.com/sasangihasadara/Wellness-App',
+    github: 'https://github.com/sasangihasadara/Wellness_App',
     tech: ['Kotlin', 'Android Studio', 'UI / UX'],
     challenge:
       'The app needed to feel calm and easy to use so health tracking would not become overwhelming for the user.',
@@ -255,7 +270,7 @@ export const projects = [
     title: 'Optical System',
     description: 'Inventory and billing system tailored for optical shop operations.',
     image: '/images/optical.jpg',
-    github: 'https://github.com/sasangihasadara/Myproject',
+    github: 'https://github.com/sasangihasadara/Optical_System',
     tech: ['PHP', 'CSS', 'MySQL'],
     challenge:
       'The challenge was to support day-to-day optical shop tasks such as stock tracking, billing, and record keeping in one organized system.',
