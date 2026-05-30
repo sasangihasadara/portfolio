@@ -4,39 +4,58 @@ import { heroStats } from '../data/portfolioData'
 
 export default function Home() {
   return (
-    <section className="relative overflow-hidden pb-20 pt-20">
+    <section className="relative overflow-hidden pb-28 pt-24 lg:pb-32 lg:pt-28">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.06),_transparent_30%),radial-gradient(circle_at_bottom_left,_rgba(148,163,184,0.08),_transparent_35%)]" />
 
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-        <div>
+      <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-[1.12fr_0.88fr] lg:items-center">
+        <div className="space-y-6">
+          <div className="reveal inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-slate-300">
+            <i data-lucide="sparkles" className="h-3.5 w-3.5" />
+            Portfolio / React / UI Design
+          </div>
+
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-slate-400">
             React Developer - Clean UI - Fast Delivery
           </p>
-          <h1 className="font-display max-w-2xl text-5xl font-semibold leading-tight md:text-6xl">
+          <h1 className="font-display reveal reveal-1 max-w-2xl text-5xl font-semibold leading-tight md:text-6xl">
             Hi, I&apos;m <br />
             <span className="text-white">Sasangi Ranasinghe</span>
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+          <p className="reveal reveal-2 max-w-2xl text-lg leading-8 text-slate-300">
             I build responsive web applications and practical project solutions with React, Tailwind CSS, PHP,
             JavaScript, and MySQL. My focus is on clean UI, smooth user flow, and code that is easy to grow.
           </p>
 
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+          <div className="reveal reveal-3 flex flex-col gap-4 sm:flex-row">
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 font-semibold text-[#080b1f] transition hover:bg-slate-200"
+              className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 font-semibold text-[#080b1f] transition hover:-translate-y-0.5 hover:bg-slate-200"
             >
+              <i data-lucide="send" className="mr-2 h-4 w-4" />
               Hire Me
             </Link>
             <Link
               to="/projects"
-              className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 font-semibold text-white transition hover:bg-white/5"
+              className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/5"
             >
               View Projects
             </Link>
+            <Link
+              to="/education"
+              className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 font-semibold text-slate-200 transition hover:-translate-y-0.5 hover:bg-white/5"
+            >
+              Certificates
+            </Link>
           </div>
 
-          <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
+          <div className="reveal reveal-4 max-w-2xl rounded-3xl border border-white/10 bg-white/[0.03] p-5">
+            <p className="text-sm leading-7 text-slate-300">
+              Available for internships, small freelance tasks, and student collaborations. I like projects that are
+              practical, useful, and well-finished.
+            </p>
+          </div>
+
+          <div className="reveal reveal-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
             {heroStats.map((stat) => (
               <div key={stat.label} className="ui-card rounded-2xl p-4">
                 <p className="font-display text-2xl font-semibold text-white">{stat.value}</p>
@@ -45,7 +64,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-3 text-sm text-slate-300">
+          <div className="reveal reveal-4 flex flex-wrap gap-3 text-sm text-slate-300">
             <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2">React</span>
             <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2">Tailwind</span>
             <span className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2">JavaScript</span>
@@ -56,14 +75,14 @@ export default function Home() {
         <div className="flex justify-center lg:justify-end">
           <div className="relative">
             <div className="absolute inset-0 rounded-full bg-white/10 blur-3xl" />
-            <div className="ui-card relative rounded-[2rem] p-4">
+            <div className="ui-card reveal reveal-2 relative rounded-[2rem] p-4">
               <img
                 src="/images/sasa.jpg"
                 alt="Sasangi"
                 className="h-[18rem] w-[18rem] rounded-[1.5rem] object-cover object-top sm:h-[24rem] sm:w-[24rem]"
               />
             </div>
-            <div className="ui-card absolute -bottom-5 -left-5 rounded-2xl px-5 py-4">
+            <div className="ui-card reveal reveal-4 absolute -bottom-5 -left-5 rounded-2xl px-5 py-4">
               <p className="text-sm text-slate-400">Open for</p>
               <p className="font-display text-lg font-semibold text-white">Internships & Project Work</p>
             </div>

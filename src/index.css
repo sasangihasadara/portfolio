@@ -61,3 +61,34 @@ body::before {
   font-family: 'Fraunces', Georgia, serif;
   letter-spacing: -0.02em;
 }
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  animation: rise 0.7s ease both;
+}
+
+.reveal-1 {
+  animation-delay: 0.08s;
+}
+
+.reveal-2 {
+  animation-delay: 0.16s;
+}
+
+.reveal-3 {
+  animation-delay: 0.24s;
+}
+
+.reveal-4 {
+  animation-delay: 0.32s;
+}
