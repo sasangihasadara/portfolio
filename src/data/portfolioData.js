@@ -5,7 +5,6 @@ export const navLinks = [
   { to: '/projects', label: 'Projects' },
   { to: '/services', label: 'Services' },
   { to: '/education', label: 'Education' },
-  { to: '/experience', label: 'Experience' },
   { to: '/contact', label: 'Contact' },
 ]
 
@@ -90,34 +89,27 @@ export const educationItems = [
   },
 ]
 
-export const experienceItems = [
+export const certificateItems = [
   {
-    title: 'E-Commerce Website',
-    period: 'Full-stack portfolio project',
+    title: 'Add your certificate title here',
+    issuer: 'Add issuer or platform',
+    year: '2026',
     description:
-      'Built an online shopping experience with product browsing, cart flow, and admin-oriented features.',
-    tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
+      'Use this section to show your completed certificates, short courses, or training badges.',
   },
   {
-    title: 'Wellness Mobile App',
-    period: 'Android app project',
+    title: 'Add your certificate title here',
+    issuer: 'Add issuer or platform',
+    year: '2026',
     description:
-      'Created a health and wellness tracking concept focused on a simple user experience and clean structure.',
-    tags: ['Kotlin', 'Android Studio', 'UI / UX'],
+      'Replace this placeholder with one of your real certificates once you share the details.',
   },
   {
-    title: 'Optical System',
-    period: 'Management system',
+    title: 'Add your certificate title here',
+    issuer: 'Add issuer or platform',
+    year: '2026',
     description:
-      'Designed a shop management solution for inventory and billing workflows in an optical business context.',
-    tags: ['PHP', 'CSS', 'MySQL'],
-  },
-  {
-    title: 'Online Examination System',
-    period: 'University group project',
-    description:
-      'Contributed to an online assessment system designed for structured exam workflows and submission handling.',
-    tags: ['PHP', 'HTML', 'CSS', 'MySQL'],
+      'You can list technical, academic, or professional certificates in this same layout.',
   },
 ]
 
@@ -163,4 +155,3 @@ export const projects = [
       'A collaborative academic project designed around question handling, exam flow, and structured submission management.',
   },
 ]
-

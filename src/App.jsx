@@ -7,7 +7,6 @@ import Skills from './pages/Skills'
 import Projects from './pages/Projects'
 import Services from './pages/Services'
 import Education from './pages/Education'
-import Experience from './pages/Experience'
 import Contact from './pages/Contact'
 import Footer from './components/Footer'
 
@@ -34,7 +33,7 @@ export default function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/services" element={<Services />} />
           <Route path="/education" element={<Education />} />
-          <Route path="/experience" element={<Experience />} />
+          <Route path="/experience" element={<Navigate to="/education" replace />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
