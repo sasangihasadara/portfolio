@@ -36,8 +36,8 @@ export default function Home() {
               Hire Me
             </Link>
             <a
-              href="/images/SasangiRanasingha_CV.pdf"
-              download="SasangiRanasingha_CV.pdf"
+              href="/images/Sasangi_CV.pdf"
+              download="Sasangi_CV.pdf"
               className="inline-flex w-full items-center justify-center rounded-full border border-white/15 px-6 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/5 sm:w-auto"
             >
               <i data-lucide="download" className="mr-2 h-4 w-4" />
