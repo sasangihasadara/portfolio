@@ -74,7 +74,7 @@ export default function Home() {
             <div className="absolute inset-0 rounded-full bg-white/10 blur-3xl" />
             <div className="ui-card reveal reveal-2 float-slow relative rounded-[2rem] p-4">
               <img
-                src="/images/sasa.jpg"
+                src="/images/Me.jpg"
                 alt="Sasangi Ranasinghe"
                 className="h-[18rem] w-[18rem] rounded-[1.5rem] object-cover object-top sm:h-[24rem] sm:w-[24rem]"
               />
