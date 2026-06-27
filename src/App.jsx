@@ -28,7 +28,7 @@ export default function App() {
     <div className="min-h-screen text-white">
       <LiveBackground />
       <Navbar />
-      <main className="relative z-10 pt-16">
+      <main className="relative z-10 pt-20">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

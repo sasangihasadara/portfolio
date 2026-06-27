@@ -11,10 +11,16 @@ export default function Navbar() {
   }, [location.pathname])
 
   return (
-    <nav className="fixed top-0 z-50 w-full border-b border-white/10 bg-[#050816]/90 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <Link to="/" className="text-lg font-semibold tracking-wide text-white">
-          Portfolio
+    <nav className="fixed top-0 z-50 w-full border-b border-white/10 bg-[#050816]/80 backdrop-blur-xl">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
+        <Link to="/" className="group flex items-center gap-3 text-white">
+          <span className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-sm font-semibold text-white transition group-hover:border-sky-400/30 group-hover:bg-white/10">
+            SR
+          </span>
+          <span className="hidden flex-col leading-tight sm:flex">
+            <span className="text-sm font-semibold tracking-wide text-white">Sasangi Ranasinghe</span>
+            <span className="text-[11px] uppercase tracking-[0.22em] text-slate-400">Full-Stack Developer</span>
+          </span>
         </Link>
 
         <div className="hidden items-center gap-2 lg:flex">
@@ -25,19 +31,24 @@ export default function Navbar() {
               end={link.to === '/'}
               className={({ isActive }) =>
                 `rounded-full px-4 py-2 text-sm font-medium transition ${
-                  isActive ? 'bg-white/10 text-white' : 'text-slate-300 hover:text-white'
+                  isActive
+                    ? 'bg-white/10 text-white ring-1 ring-white/10'
+                    : 'text-slate-300 hover:bg-white/5 hover:text-white'
                 }`
               }
             >
               {link.label}
             </NavLink>
           ))}
+          <span className="ml-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-100">
+            Open for internships
+          </span>
         </div>
 
         <button
           type="button"
           onClick={() => setMenuOpen((open) => !open)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-white transition hover:bg-white/10 lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition hover:bg-white/10 lg:hidden"
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
         >
@@ -70,7 +81,9 @@ export default function Navbar() {
               end={link.to === '/'}
               className={({ isActive }) =>
                 `rounded-xl px-4 py-3 text-sm font-medium transition ${
-                  isActive ? 'bg-white/10 text-white' : 'text-slate-300 hover:bg-white/5 hover:text-white'
+                  isActive
+                    ? 'bg-white/10 text-white ring-1 ring-white/10'
+                    : 'text-slate-300 hover:bg-white/5 hover:text-white'
                 }`
               }
               onClick={() => setMenuOpen(false)}
