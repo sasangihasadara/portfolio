@@ -29,7 +29,7 @@ export default function Contact() {
   }
 
   return (
-    <section className="bg-[#080b1f] px-6 py-20">
+    <section className="px-6 py-20">
       <div className="mx-auto max-w-6xl">
         <PageHeader
           eyebrow="Contact"
@@ -168,7 +168,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={loading}
-                className="inline-flex w-full items-center justify-center rounded-full bg-white py-3 font-semibold text-[#080b1f] transition hover:bg-slate-200 disabled:cursor-not-allowed disabled:opacity-70"
+                className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-sky-500 via-blue-500 to-violet-600 py-3 font-semibold text-white shadow-[0_14px_30px_rgba(59,130,246,0.22)] transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {loading ? 'Sending...' : 'Send Message'}
               </button>

@@ -75,7 +75,7 @@ export default function Projects() {
                 <div className="mt-6 flex flex-wrap gap-3">
                   <button
                     onClick={() => setModal(project)}
-                    className="w-full rounded-full bg-white px-5 py-2.5 font-semibold text-[#080b1f] transition hover:bg-slate-200 sm:w-auto"
+                    className="w-full rounded-full bg-gradient-to-r from-sky-500 via-blue-500 to-violet-600 px-5 py-2.5 font-semibold text-white shadow-[0_14px_30px_rgba(59,130,246,0.22)] transition hover:-translate-y-0.5 sm:w-auto"
                   >
                     View Details
                   </button>
@@ -106,7 +106,7 @@ export default function Projects() {
 
       {modal ? (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-[#050816]/80 px-4 backdrop-blur-sm"
           onClick={() => setModal(null)}
         >
           <div
@@ -167,7 +167,7 @@ export default function Projects() {
                 href={modal.github}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex w-full items-center justify-center rounded-full bg-white px-5 py-3 font-semibold text-[#080b1f] transition hover:bg-slate-200 sm:w-auto"
+                className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-sky-500 via-blue-500 to-violet-600 px-5 py-3 font-semibold text-white shadow-[0_14px_30px_rgba(59,130,246,0.22)] transition hover:-translate-y-0.5 sm:w-auto"
               >
                 View on GitHub
               </a>

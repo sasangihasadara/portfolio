@@ -6,7 +6,7 @@ export default function PageHeader({
   description,
   actions,
   eyebrowClassName = 'text-slate-400',
-  titleClassName = 'font-display text-white',
+  titleClassName = 'font-display bg-gradient-to-r from-blue-400 via-violet-400 to-blue-500 bg-clip-text text-transparent',
   descriptionClassName = 'text-slate-300',
 }) {
   return (

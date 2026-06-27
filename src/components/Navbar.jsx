@@ -11,7 +11,7 @@ export default function Navbar() {
   }, [location.pathname])
 
   return (
-    <nav className="fixed top-0 z-50 w-full border-b border-white/10 bg-[#080b1f]/90 backdrop-blur">
+    <nav className="fixed top-0 z-50 w-full border-b border-white/10 bg-[#050816]/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <Link to="/" className="text-lg font-semibold tracking-wide text-white">
           Portfolio
@@ -61,7 +61,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      <div className={`border-t border-white/10 bg-[#080b1f]/95 lg:hidden ${menuOpen ? 'block' : 'hidden'}`}>
+      <div className={`border-t border-white/10 bg-[#050816]/95 lg:hidden ${menuOpen ? 'block' : 'hidden'}`}>
         <div className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4">
           {navLinks.map((link) => (
             <NavLink
