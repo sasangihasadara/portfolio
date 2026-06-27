@@ -19,7 +19,6 @@ export default function Navbar() {
           </span>
           <span className="hidden flex-col leading-tight sm:flex">
             <span className="text-sm font-semibold tracking-wide text-white">Sasangi Ranasinghe</span>
-            <span className="text-[11px] uppercase tracking-[0.22em] text-slate-400">Full-Stack Developer</span>
           </span>
         </Link>
 

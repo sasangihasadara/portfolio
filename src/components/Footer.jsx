@@ -6,13 +6,11 @@ export default function Footer() {
     <footer className="mt-12 border-t border-white/10 bg-[#050816]/90 py-12 backdrop-blur-xl">
       <div className="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-[1.2fr_0.8fr] md:items-end">
         <div className="max-w-2xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">Contact footer</p>
           <p className="mt-3 text-2xl font-semibold text-white md:text-3xl">
-            Let&apos;s build something practical, polished, and ready for the real world.
+            Open to internships, collaborations, and project work.
           </p>
           <p className="mt-3 max-w-xl text-sm leading-7 text-slate-400">
-            I am open to internships, collaborations, and project opportunities where I can contribute
-            and keep growing as a full-stack developer.
+            I am looking to contribute, learn, and keep improving as a full-stack developer.
           </p>
         </div>
 
