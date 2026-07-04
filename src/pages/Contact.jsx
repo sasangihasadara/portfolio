@@ -33,8 +33,8 @@ export default function Contact() {
       <div className="mx-auto max-w-6xl">
         <PageHeader
           eyebrow="Contact"
-          title="Let's build something useful together"
-          description="I'm open to internships, collaborations, and project opportunities. If you need a responsive site or a practical student project partner, send a message."
+          title="Let's build, design, and test something useful together"
+          description="I'm open to internships, collaborations, and project opportunities across full-stack work, UI/UX, and QA. If you need a practical student project partner, send a message."
         />
 
         <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">

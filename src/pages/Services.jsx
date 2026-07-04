@@ -9,7 +9,7 @@ export default function Services() {
         <PageHeader
           eyebrow="Services"
           title="How I can help"
-          description="These are the kinds of tasks I can support well right now, especially for portfolio sites, student projects, and small web applications."
+          description="These are the three areas I can support well right now: full-stack delivery, UI/UX implementation, and QA/testing for small web applications."
         />
 
         <div className="grid gap-6 md:grid-cols-2">

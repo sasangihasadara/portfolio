@@ -9,9 +9,9 @@ export const navLinks = [
 ]
 
 export const heroStats = [
-  { value: '5+', label: 'Portfolio projects' },
-  { value: '5+', label: 'Core technologies' },
-  { value: 'Open', label: 'For internships' },
+  { value: 'Full-Stack', label: 'Build and integration' },
+  { value: 'UI/UX', label: 'Design and usability' },
+  { value: 'QA', label: 'Testing and quality' },
 ]
 
 export const skillGroups = [
@@ -67,32 +67,25 @@ export const skillGroups = [
 
 export const services = [
   {
-    title: 'Responsive Websites',
-    icon: 'monitor-smartphone',
-    description:
-      'Clean, mobile-friendly portfolio, business, and landing pages built with React and Tailwind CSS.',
-    points: ['Modern layouts', 'Fast UI delivery', 'Cross-device polish'],
-  },
-  {
-    title: 'Project UI Implementation',
+    title: 'Full-Stack Web Apps',
     icon: 'layers-3',
     description:
-      'Turning wireframes or ideas into polished interfaces with clear structure and smooth user flow.',
-    points: ['Figma to code', 'Reusable components', 'Consistent design systems'],
+      'Responsive web applications built with clean structure, practical logic, and a focus on maintainable delivery.',
+    points: ['React', 'PHP / MySQL', 'API-ready flow'],
   },
   {
-    title: 'Backend Integration',
-    icon: 'database-zap',
+    title: 'UI / UX Design',
+    icon: 'pen-tool',
     description:
-      'Connecting frontend interfaces with practical backend logic, forms, and data-driven features.',
-    points: ['PHP / MySQL projects', 'Form handling', 'API integration'],
+      'Clear layouts, wireframes, and user flows that make interfaces feel easier to scan and use.',
+    points: ['Figma', 'Responsive layout', 'Accessible flow'],
   },
   {
-    title: 'Academic & Team Projects',
-    icon: 'users',
+    title: 'QA & Testing',
+    icon: 'clipboard-check',
     description:
-      'Reliable support for university assignments, group projects, and collaborative development work.',
-    points: ['Team collaboration', 'Problem solving', 'Clear handoff'],
+      'Manual testing, bug reporting, regression checks, and retesting that help teams ship with confidence.',
+    points: ['Test cases', 'Bug reports', 'UAT and regression'],
   },
 ]
 
@@ -101,19 +94,19 @@ export const educationItems = [
     year: 'Current',
     title: 'Undergraduate IT Student',
     description:
-      'Building a strong foundation in software development, UI implementation, and practical problem solving.',
+      'Building a strong foundation in software development, UI/UX thinking, and QA-driven problem solving.',
   },
   {
     year: 'Ongoing',
-    title: 'Web Development Practice',
+    title: 'Full-Stack, UI/UX, and QA Practice',
     description:
-      'Working with React, PHP, CSS, JavaScript, Python, and MySQL through real portfolio projects.',
+      'Working with real portfolio projects while balancing build quality, user experience, and testing discipline.',
   },
   {
     year: 'Next Step',
     title: 'Internship Readiness',
     description:
-      'Preparing for an internship opportunity where I can learn from production work and contribute to a team.',
+      'Preparing for an internship opportunity where I can contribute through full-stack delivery, UI/UX awareness, and quality checks.',
   },
 ]
 

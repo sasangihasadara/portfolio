@@ -11,7 +11,7 @@ export default function Projects() {
         <PageHeader
           eyebrow="Projects"
           title="Selected work"
-          description="These projects show the kind of problems I enjoy solving: practical interfaces, clear user flow, useful back-end structure, and decisions backed by real case-study thinking."
+          description="These projects show the kind of problems I enjoy solving across full-stack delivery, UI/UX flow, and QA-minded checking for responsiveness, edge cases, and usability."
         />
 
         <div className="grid gap-8 md:grid-cols-2">

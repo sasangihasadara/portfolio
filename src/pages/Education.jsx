@@ -20,7 +20,7 @@ export default function Education() {
         <PageHeader
           eyebrow="Education"
           title="Certificates and learning path"
-          description="My learning journey includes practical software skills, problem-solving habits, and certificates that show my growth in web development, tools, and real project work. I use each certificate as a step toward stronger technical confidence and better industry readiness."
+          description="My learning journey includes practical software skills, problem-solving habits, and certificates that show my growth in full-stack development, UI/UX, and QA. I use each certificate as a step toward stronger technical confidence and better industry readiness."
           actions={
             <a
               href="#certificate-gallery"
