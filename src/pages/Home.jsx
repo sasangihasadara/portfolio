@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { heroStats } from '../data/portfolioData'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -25,9 +26,9 @@ export default function Home() {
               animate="visible"
               variants={fadeUp}
               custom={0}
-              className="inline-flex items-center gap-3 rounded-full border border-sky-400/20 bg-sky-400/5 px-5 py-2 text-xs font-semibold uppercase tracking-[0.4em] text-sky-200 shadow-[0_18px_60px_rgba(56,189,248,0.08)]"
+              className="inline-flex items-center gap-3 rounded-full border border-sky-400/20 bg-sky-400/5 px-5 py-2 text-xs font-semibold tracking-[0.24em] text-sky-200 shadow-[0_18px_60px_rgba(56,189,248,0.08)]"
             >
-              Fullstack • UI/UX • QA
+              Fullstack Developer • QA engineer • Android Developer
             </motion.div>
 
             <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0.1}>
@@ -83,7 +84,7 @@ export default function Home() {
                 href="https://github.com/sasangihasadara"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
+                className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/20 text-white shadow-lg shadow-slate-950/50 transition hover:bg-white/30 hover:border-white/30 hover:text-slate-950"
               >
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 0.297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.73.083-.73 1.205.084 1.84 1.237 1.84 1.237 1.07 1.835 2.81 1.305 3.495.998.108-.775.418-1.306.76-1.606-2.665-.303-5.467-1.332-5.467-5.931 0-1.31.468-2.381 1.236-3.221-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.289-1.552 3.295-1.23 3.295-1.23.655 1.653.243 2.873.12 3.176.77.84 1.235 1.911 1.235 3.221 0 4.61-2.807 5.625-5.48 5.921.43.372.815 1.102.815 2.222 0 1.606-.015 2.898-.015 3.293 0 .319.216.694.825.576 4.765-1.589 8.2-6.084 8.2-11.386 0-6.627-5.373-12-12-12z" />
@@ -93,7 +94,7 @@ export default function Home() {
                 href="https://www.linkedin.com/in/sasangi-ranasingha-67b35b34a"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
+                className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/20 text-white shadow-lg shadow-slate-950/50 transition hover:bg-white/30 hover:border-white/30 hover:text-slate-950"
               >
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8.5h4V24h-4V8.5zm7.5 0h3.75v2.2h.05c.52-.98 1.8-2.01 3.7-2.01 3.96 0 4.7 2.6 4.7 5.98V24h-4V14.3c0-2.28-.04-5.2-3.18-5.2-3.18 0-3.66 2.48-3.66 5.04V24h-4V8.5z" />
@@ -101,7 +102,7 @@ export default function Home() {
               </a>
               <a
                 href="mailto:sasangihasadara@gmail.com"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
+                className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/20 text-white shadow-lg shadow-slate-950/50 transition hover:bg-white/30 hover:border-white/30 hover:text-slate-950"
               >
                 <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-18 8h18V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8z" />
@@ -111,12 +112,13 @@ export default function Home() {
           </div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.94, y: 20 }}
+            initial={{ opacity: 0, scale: 0.96, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
+            whileHover={{ y: -4, scale: 1.005 }}
             transition={{ duration: 0.7, ease: 'easeOut' }}
             className="flex justify-center lg:justify-end"
           >
-            <div className="relative max-w-[28rem] rounded-[2.6rem] border border-white/10 bg-white/5 p-3 shadow-2xl shadow-black/30 backdrop-blur-xl">
+            <div className="relative max-w-[28rem] rounded-[2.6rem] border border-white/10 bg-white/5 p-3 shadow-2xl shadow-black/30 backdrop-blur-xl float-slow">
               <div className="absolute inset-0 rounded-[2.3rem] bg-gradient-to-br from-fuchsia-500/30 via-violet-500/20 to-sky-500/20 blur-2xl" />
               <div className="relative overflow-hidden rounded-[2.3rem] bg-[#060918] p-6">
                 <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-white/10 to-transparent" />
@@ -132,6 +134,15 @@ export default function Home() {
               </div>
             </div>
           </motion.div>
+        </div>
+
+        <div className="mt-16 grid gap-5 sm:grid-cols-3">
+          {heroStats.map((stat) => (
+            <div key={stat.value} className="ui-card rounded-[2rem] p-6">
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-400">{stat.value}</p>
+              <p className="mt-4 text-lg font-semibold text-white">{stat.label}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

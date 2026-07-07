@@ -13,7 +13,7 @@ import Footer from './components/Footer'
 
 export default function App() {
   const location = useLocation()
-  const showFooter = location.pathname === '/contact'
+  const showFooter = true
 
   useEffect(() => {
     if (window.emailjs && window.emailjs.init) window.emailjs.init('h7l3hvKInz5qNnRRT')
