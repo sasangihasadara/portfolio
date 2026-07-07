@@ -18,7 +18,7 @@ export default function Navbar() {
             SR
           </span>
           <span className="hidden flex-col leading-tight sm:flex">
-            <span className="text-sm font-semibold tracking-wide text-white">Sasangi Ranasinghe</span>
+            <span className="text-sm font-semibold tracking-wide text-white">Sasangi Ranasingha</span>
           </span>
         </Link>
 

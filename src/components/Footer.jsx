@@ -28,7 +28,7 @@ export default function Footer() {
       </div>
 
       <p className="mt-10 text-center text-sm text-slate-500">
-        Copyright 2026 Sasangi Ranasinghe. All rights reserved.
+        Copyright 2026 Sasangi Ranasingha. All rights reserved.
       </p>
     </footer>
   )

@@ -2,41 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
-const heroStats = [
-  { value: 'Full-Stack', label: 'Build and integration' },
-  { value: 'UI/UX', label: 'Design and usability' },
-  { value: 'QA', label: 'Testing and quality' },
-]
-
-const skillTags = ['React', 'Figma', 'Test Cases', 'Regression', 'UI Review', 'Bug Reports']
-
-const processSteps = [
-  {
-    title: 'Build',
-    text: 'I turn ideas into responsive interfaces and practical application flows.',
-  },
-  {
-    title: 'Design',
-    text: 'I shape layout, spacing, and visual rhythm so the experience feels clear.',
-  },
-  {
-    title: 'Test',
-    text: 'I check behavior, edge cases, and responsiveness so issues are caught early.',
-  },
-  {
-    title: 'Refine',
-    text: 'I polish the result through re-testing, feedback, and final quality checks.',
-  },
-]
-
-const focusPoints = [
-  'Full-stack development for practical web apps',
-  'UI/UX design for clear, usable interfaces',
-  'QA and testing for reliable delivery',
-]
-
 const fadeUp = {
-  hidden: { opacity: 0, y: 28 },
+  hidden: { opacity: 0, y: 24 },
   visible: (delay = 0) => ({
     opacity: 1,
     y: 0,
@@ -47,84 +14,59 @@ const fadeUp = {
 export default function Home() {
   return (
     <section className="relative min-h-screen overflow-hidden text-white">
-      <div className="pointer-events-none absolute -left-40 -top-40 h-[600px] w-[600px] rounded-full bg-sky-500/20 blur-[120px]" />
-      <div className="pointer-events-none absolute bottom-0 right-0 h-[540px] w-[540px] rounded-full bg-violet-500/15 blur-[120px]" />
+      <div className="pointer-events-none absolute -left-40 -top-40 h-[560px] w-[560px] rounded-full bg-sky-500/20 blur-[120px]" />
+      <div className="pointer-events-none absolute bottom-0 right-0 h-[520px] w-[520px] rounded-full bg-violet-500/20 blur-[120px]" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-20 lg:py-28">
-        <div className="grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="space-y-7">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-6 py-24 lg:px-10">
+        <div className="grid items-center gap-14 lg:grid-cols-[1.12fr_0.88fr]">
+          <div className="space-y-9 max-w-2xl">
             <motion.div
               initial="hidden"
               animate="visible"
               variants={fadeUp}
               custom={0}
-              className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-300"
+              className="inline-flex items-center gap-3 rounded-full border border-sky-400/20 bg-sky-400/5 px-5 py-2 text-xs font-semibold uppercase tracking-[0.4em] text-sky-200 shadow-[0_18px_60px_rgba(56,189,248,0.08)]"
             >
-              <span className="h-2 w-2 rounded-full bg-emerald-400" />
-              Full-stack / UI/UX / QA portfolio
+              Fullstack • UI/UX • QA
+            </motion.div>
+
+            <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0.1}>
+              <h1 className="text-5xl font-semibold tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl">
+                Hi, I&apos;m <span className="text-transparent bg-gradient-to-r from-fuchsia-400 via-violet-400 to-sky-400 bg-clip-text">Sasangi Ranasingha</span>
+              </h1>
             </motion.div>
 
             <motion.p
               initial="hidden"
               animate="visible"
               variants={fadeUp}
-              custom={0.1}
-              className="text-[11px] font-semibold uppercase tracking-[0.28em] text-sky-400"
-            >
-              Third-year IT undergraduate at SLIIT
-            </motion.p>
-
-            <motion.h1
-              initial="hidden"
-              animate="visible"
-              variants={fadeUp}
               custom={0.2}
-              className="font-display max-w-3xl text-3xl font-semibold leading-[1.08] tracking-[-0.04em] bg-gradient-to-r from-blue-400 via-violet-400 to-blue-500 bg-clip-text text-transparent sm:text-4xl lg:text-5xl"
+              className="max-w-xl text-base leading-8 text-slate-300 sm:text-lg"
             >
-              I build, design, and test digital experiences so they feel reliable,
-              polished, and easy to use.
-            </motion.h1>
-
-            <motion.p
-              initial="hidden"
-              animate="visible"
-              variants={fadeUp}
-              custom={0.3}
-              className="max-w-2xl text-xs font-medium leading-6 text-sky-200 sm:text-sm"
-            >
-              I&apos;m Sasangi Ranasinghe, a third-year Information Technology undergraduate who enjoys
-              working across full-stack development, UI/UX, and QA. I focus on practical web apps,
-              usable interfaces, and testing that helps teams ship with confidence.
+              I build responsive web and mobile applications using frontend and backend technologies, databases, and software testing. My focus is on polished interfaces, stable performance, and real-world usability.
             </motion.p>
 
             <motion.div
               initial="hidden"
               animate="visible"
               variants={fadeUp}
-              custom={0.4}
+              custom={0.3}
               className="flex flex-wrap gap-4"
             >
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-sky-500 to-violet-600 px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-500/25 transition hover:scale-[1.03] hover:shadow-sky-500/40"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-fuchsia-500 via-violet-500 to-sky-500 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-fuchsia-500/25 transition hover:-translate-y-0.5"
               >
-                Let&apos;s talk
+                Contact Me
                 <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7 7 7-7 7" />
                 </svg>
               </Link>
 
-              <Link
-                to="/projects"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 py-3 text-sm font-semibold text-white transition hover:border-sky-400/40 hover:bg-white/10"
-              >
-                View projects
-              </Link>
-
               <a
                 href="/images/Sasangi_CV.pdf"
                 download
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 py-3 text-sm font-semibold text-slate-100 transition hover:border-white/25 hover:bg-white/10"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-8 py-3 text-sm font-semibold text-white transition hover:border-white/25 hover:bg-white/10"
               >
                 Download CV
               </a>
@@ -134,144 +76,64 @@ export default function Home() {
               initial="hidden"
               animate="visible"
               variants={fadeUp}
-              custom={0.5}
-              className="ui-card rounded-3xl p-5"
+              custom={0.4}
+              className="flex items-center gap-4"
             >
-              <div className="flex items-center justify-between gap-4">
-                <div>
-                  <p className="text-xs uppercase tracking-[0.24em] text-slate-400">Current focus</p>
-                  <p className="mt-1 text-sm text-slate-200">
-                    Balancing build quality, usable design, and reliable testing.
-                  </p>
-                </div>
-                <div className="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-100">
-                  Open for internships
-                </div>
-              </div>
-
-              <div className="mt-4 grid gap-3 sm:grid-cols-3">
-                {focusPoints.map((point) => (
-                  <div key={point} className="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-300">
-                    {point}
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={fadeUp}
-              custom={0.6}
-              className="grid gap-3 sm:grid-cols-3"
-            >
-              {heroStats.map((stat) => (
-                <div key={stat.label} className="ui-card rounded-3xl p-5">
-                  <p className="text-xl font-bold text-sky-300">{stat.value}</p>
-                  <p className="mt-2 text-sm leading-6 text-slate-400">{stat.label}</p>
-                </div>
-              ))}
-            </motion.div>
-
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={fadeUp}
-              custom={0.7}
-              className="flex flex-wrap gap-2"
-            >
-              {skillTags.map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-[11px] font-medium text-slate-300 transition hover:border-sky-400/30 hover:text-sky-200"
-                >
-                  {tag}
-                </span>
-              ))}
+              <a
+                href="https://github.com/sasangihasadara"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
+              >
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0.297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.73.083-.73 1.205.084 1.84 1.237 1.84 1.237 1.07 1.835 2.81 1.305 3.495.998.108-.775.418-1.306.76-1.606-2.665-.303-5.467-1.332-5.467-5.931 0-1.31.468-2.381 1.236-3.221-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.289-1.552 3.295-1.23 3.295-1.23.655 1.653.243 2.873.12 3.176.77.84 1.235 1.911 1.235 3.221 0 4.61-2.807 5.625-5.48 5.921.43.372.815 1.102.815 2.222 0 1.606-.015 2.898-.015 3.293 0 .319.216.694.825.576 4.765-1.589 8.2-6.084 8.2-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/sasangi-ranasingha-67b35b34a"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
+              >
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8.5h4V24h-4V8.5zm7.5 0h3.75v2.2h.05c.52-.98 1.8-2.01 3.7-2.01 3.96 0 4.7 2.6 4.7 5.98V24h-4V14.3c0-2.28-.04-5.2-3.18-5.2-3.18 0-3.66 2.48-3.66 5.04V24h-4V8.5z" />
+                </svg>
+              </a>
+              <a
+                href="mailto:sasangihasadara@gmail.com"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
+              >
+                <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-18 8h18V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8z" />
+                </svg>
+              </a>
             </motion.div>
           </div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.92, y: 18 }}
+            initial={{ opacity: 0, scale: 0.94, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.7, ease: 'easeOut' }}
             className="flex justify-center lg:justify-end"
           >
-            <div className="relative w-full max-w-[30rem]">
-              <div
-                className="absolute inset-[-3px] rounded-[2.5rem]"
-                style={{
-                  background: 'linear-gradient(135deg, rgba(56,189,248,0.95) 0%, rgba(124,58,237,0.8) 52%, rgba(14,165,233,0.95) 100%)',
-                  padding: '3px',
-                }}
-              >
-                <div className="h-full w-full rounded-[2.3rem] bg-[#060918]" />
+            <div className="relative max-w-[28rem] rounded-[2.6rem] border border-white/10 bg-white/5 p-3 shadow-2xl shadow-black/30 backdrop-blur-xl">
+              <div className="absolute inset-0 rounded-[2.3rem] bg-gradient-to-br from-fuchsia-500/30 via-violet-500/20 to-sky-500/20 blur-2xl" />
+              <div className="relative overflow-hidden rounded-[2.3rem] bg-[#060918] p-6">
+                <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-white/10 to-transparent" />
+                <img
+                  src="/images/Me.jpg"
+                  alt="Profile"
+                  className="h-[24rem] w-full rounded-[2rem] object-cover object-top shadow-2xl shadow-black/30 sm:h-[30rem]"
+                />
+                <div className="absolute bottom-6 left-6 inline-flex items-center gap-3 rounded-full bg-black/60 px-4 py-2 text-sm text-white shadow-lg shadow-black/40 backdrop-blur-md">
+                  <span className="h-3.5 w-3.5 rounded-full bg-emerald-400" />
+                  Available for work
+                </div>
               </div>
-
-              <div className="absolute inset-0 -z-10 rounded-[2.5rem] bg-sky-500/15 blur-3xl" />
-
-              <motion.img
-                animate={{ y: [0, -10, 0] }}
-                transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
-                src="/images/Me.jpg"
-                alt="Sasangi Ranasinghe"
-                className="relative z-10 h-[26rem] w-full rounded-[2.3rem] object-cover object-top shadow-2xl shadow-black/40 sm:h-[34rem]"
-              />
-
             </div>
           </motion.div>
         </div>
-
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={fadeUp}
-          custom={0.2}
-          className="mt-20 grid gap-6 lg:mt-24"
-        >
-          <div className="max-w-3xl">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-sky-400">
-              My process
-            </p>
-            <h2 className="font-display mt-3 text-3xl font-bold tracking-[-0.03em] sm:text-4xl">
-              A simple process that keeps the product stable, usable, and well built.
-            </h2>
-            <p className="mt-4 max-w-2xl text-base leading-8 text-slate-300">
-              I approach project work by shaping the interface carefully, checking the flow, and
-              re-testing with a focus on usability, consistency, and edge cases.
-            </p>
-          </div>
-
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-            {processSteps.map((step, index) => (
-              <div key={step.title} className="ui-card rounded-3xl p-6">
-                <div className="flex items-center justify-between">
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-sm font-semibold text-sky-200">
-                    0{index + 1}
-                  </span>
-                  <span className="text-[10px] uppercase tracking-[0.22em] text-slate-500">
-                    Step
-                  </span>
-                </div>
-                <h3 className="mt-6 text-xl font-semibold text-white">{step.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-slate-300">{step.text}</p>
-              </div>
-            ))}
-          </div>
-        </motion.div>
       </div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.5 }}
-        className="fixed bottom-6 right-6 z-20 hidden h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 backdrop-blur-md sm:flex"
-      >
-        <svg className="h-4 w-4 text-slate-300" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-        </svg>
-      </motion.div>
     </section>
   )
 }
