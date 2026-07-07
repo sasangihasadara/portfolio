@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { heroStats } from '../data/portfolioData'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -28,7 +27,7 @@ export default function Home() {
               custom={0}
               className="inline-flex items-center gap-3 rounded-full border border-sky-400/20 bg-sky-400/5 px-5 py-2 text-xs font-semibold tracking-[0.24em] text-sky-200 shadow-[0_18px_60px_rgba(56,189,248,0.08)]"
             >
-              Fullstack Developer • QA engineer • Android Developer
+              Fullstack Developer • QA Engineer • Android Developer
             </motion.div>
 
             <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0.1}>
@@ -134,15 +133,6 @@ export default function Home() {
               </div>
             </div>
           </motion.div>
-        </div>
-
-        <div className="mt-16 grid gap-5 sm:grid-cols-3">
-          {heroStats.map((stat) => (
-            <div key={stat.value} className="ui-card rounded-[2rem] p-6">
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-400">{stat.value}</p>
-              <p className="mt-4 text-lg font-semibold text-white">{stat.label}</p>
-            </div>
-          ))}
         </div>
       </div>
     </section>
