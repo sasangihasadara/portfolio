@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
@@ -15,15 +14,15 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-wrap gap-3 md:justify-end">
-          <Link to="/about" className="rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300 transition hover:bg-white/5 hover:text-white">
+          <a href="#about" className="rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300 transition hover:bg-white/5 hover:text-white">
             About
-          </Link>
-          <Link to="/projects" className="rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300 transition hover:bg-white/5 hover:text-white">
+          </a>
+          <a href="#projects" className="rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300 transition hover:bg-white/5 hover:text-white">
             Projects
-          </Link>
-          <Link to="/contact" className="rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300 transition hover:bg-white/5 hover:text-white">
+          </a>
+          <a href="#contact" className="rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300 transition hover:bg-white/5 hover:text-white">
             Contact
-          </Link>
+          </a>
         </div>
       </div>
 

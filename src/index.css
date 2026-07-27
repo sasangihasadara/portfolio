@@ -12,6 +12,10 @@ html {
   scroll-behavior: smooth;
 }
 
+[id] {
+  scroll-margin-top: 6rem;
+}
+
 body {
   margin: 0;
   background:
@@ -128,6 +132,23 @@ body::before {
   animation: skillFillGrow 0.9s ease forwards;
   transition: width 0.35s ease, filter 0.35s ease, box-shadow 0.35s ease;
   will-change: width;
+}
+
+.skills-progress {
+  width: 0;
+  background: linear-gradient(90deg, #7c3aed, #a78bfa 55%, #60a5fa);
+  box-shadow: 0 0 16px rgba(139, 92, 246, 0.6);
+  animation: skillFillGrow 0.85s ease forwards;
+}
+
+.skills-panel {
+  transition: transform 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.skills-panel:hover {
+  transform: translateY(-4px);
+  border-color: rgba(167, 139, 250, 0.3);
+  background-color: rgba(12, 18, 42, 0.9);
 }
 
 .skill-card:hover .skill-fill {

@@ -1,11 +1,11 @@
 export const navLinks = [
-  { to: '/', label: 'Home' },
-  { to: '/about', label: 'About' },
-  { to: '/skills', label: 'Skills' },
-  { to: '/projects', label: 'Projects' },
-  { to: '/services', label: 'Services' },
-  { to: '/education', label: 'Certificates' },
-  { to: '/contact', label: 'Contact' },
+  { to: '#home', label: 'Home' },
+  { to: '#about', label: 'About' },
+  { to: '#skills', label: 'Skills' },
+  { to: '#projects', label: 'Projects' },
+  { to: '#services', label: 'Services' },
+  { to: '#certificates', label: 'Certificates' },
+  { to: '#contact', label: 'Contact' },
 ]
 
 export const heroStats = [

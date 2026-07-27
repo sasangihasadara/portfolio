@@ -1,43 +1,55 @@
 import React, { useEffect, useState } from 'react'
-import { NavLink, Link, useLocation } from 'react-router-dom'
 import { navLinks } from '../data/portfolioData'
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const location = useLocation()
+  const [activeSection, setActiveSection] = useState('#home')
 
   useEffect(() => {
-    setMenuOpen(false)
-  }, [location.pathname])
+    const sectionIds = navLinks.map(({ to }) => to.slice(1))
+    const updateActiveSection = () => {
+      const current = sectionIds.reduce((active, id) => {
+        const section = document.getElementById(id)
+        return section && section.getBoundingClientRect().top <= 120 ? `#${id}` : active
+      }, '#home')
+      setActiveSection(current)
+    }
+
+    updateActiveSection()
+    window.addEventListener('scroll', updateActiveSection, { passive: true })
+    return () => window.removeEventListener('scroll', updateActiveSection)
+  }, [])
+
+  const closeMenu = () => setMenuOpen(false)
+
+  const linkClassName = (to) =>
+    `rounded-full px-4 py-2 text-sm font-medium transition ${
+      activeSection === to
+        ? 'bg-white/10 text-white ring-1 ring-white/10'
+        : 'text-slate-300 hover:bg-white/5 hover:text-white'
+    }`
 
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-white/10 bg-[#050816]/80 backdrop-blur-xl">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-        <Link to="/" className="group flex items-center gap-3 text-white">
+        <a href="#home" className="group flex items-center gap-3 text-white" onClick={closeMenu}>
           <span className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-sm font-semibold text-white transition group-hover:border-sky-400/30 group-hover:bg-white/10">
             SR
           </span>
           <span className="hidden flex-col leading-tight sm:flex">
             <span className="text-sm font-semibold tracking-wide text-white">Sasangi Ranasingha</span>
           </span>
-        </Link>
+        </a>
 
         <div className="hidden items-center gap-2 lg:flex">
           {navLinks.map((link) => (
-            <NavLink
+            <a
               key={link.to}
-              to={link.to}
-              end={link.to === '/'}
-              className={({ isActive }) =>
-                `rounded-full px-4 py-2 text-sm font-medium transition ${
-                  isActive
-                    ? 'bg-white/10 text-white ring-1 ring-white/10'
-                    : 'text-slate-300 hover:bg-white/5 hover:text-white'
-                }`
-              }
+              href={link.to}
+              className={linkClassName(link.to)}
             >
               {link.label}
-            </NavLink>
+            </a>
           ))}
           <span className="ml-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-100">
             Open for internships
@@ -74,21 +86,14 @@ export default function Navbar() {
       <div className={`border-t border-white/10 bg-[#050816]/95 lg:hidden ${menuOpen ? 'block' : 'hidden'}`}>
         <div className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4">
           {navLinks.map((link) => (
-            <NavLink
+            <a
               key={link.to}
-              to={link.to}
-              end={link.to === '/'}
-              className={({ isActive }) =>
-                `rounded-xl px-4 py-3 text-sm font-medium transition ${
-                  isActive
-                    ? 'bg-white/10 text-white ring-1 ring-white/10'
-                    : 'text-slate-300 hover:bg-white/5 hover:text-white'
-                }`
-              }
-              onClick={() => setMenuOpen(false)}
+              href={link.to}
+              className={`${linkClassName(link.to)} rounded-xl px-4 py-3`}
+              onClick={closeMenu}
             >
               {link.label}
-            </NavLink>
+            </a>
           ))}
         </div>
       </div>

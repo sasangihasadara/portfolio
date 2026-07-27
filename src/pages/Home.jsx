@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 const fadeUp = {
@@ -53,15 +52,15 @@ export default function Home() {
               custom={0.3}
               className="flex flex-wrap gap-4"
             >
-              <Link
-                to="/contact"
+              <a
+                href="#contact"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-fuchsia-500 via-violet-500 to-sky-500 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-fuchsia-500/25 transition hover:-translate-y-0.5"
               >
                 Contact Me
                 <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7 7 7-7 7" />
                 </svg>
-              </Link>
+              </a>
 
               <a
                 href="/images/Sasangi_CV.pdf"
