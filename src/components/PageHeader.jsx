@@ -5,13 +5,13 @@ export default function PageHeader({
   title,
   description,
   actions,
-  eyebrowClassName = 'text-slate-400',
-  titleClassName = 'font-display bg-gradient-to-r from-blue-400 via-violet-400 to-blue-500 bg-clip-text text-transparent',
+  eyebrowClassName = 'text-violet-300',
+  titleClassName = 'font-display bg-[linear-gradient(90deg,#ffffff_0%,#e879f9_34%,#a78bfa_65%,#38bdf8_100%)] bg-clip-text text-transparent',
   descriptionClassName = 'text-slate-300',
 }) {
   return (
     <div className="ui-card mx-auto mb-12 max-w-5xl rounded-[2rem] p-6 md:p-8">
-      <div className="mb-5 h-px w-full bg-gradient-to-r from-sky-400/70 via-violet-400/30 to-transparent" />
+      <div className="mb-5 h-px w-full bg-gradient-to-r from-fuchsia-400/70 via-violet-400/45 to-sky-400/10" />
 
       {eyebrow ? (
         <p className={`mb-4 text-xs font-semibold uppercase tracking-[0.35em] ${eyebrowClassName}`}>

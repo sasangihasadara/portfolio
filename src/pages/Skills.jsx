@@ -85,9 +85,9 @@ export default function Skills() {
             {[...stack, ...stack].map((technology, index) => (
             <div
               key={`${technology.label}-${index}`}
-              className="skills-marquee-item group inline-flex shrink-0 items-center gap-3 rounded-2xl border border-white/[0.09] bg-white/[0.045] px-5 py-4 text-base font-semibold text-slate-100 shadow-lg shadow-black/10 transition hover:border-violet-300/25 hover:bg-violet-400/[0.08] sm:px-6"
+              className="skills-marquee-item group inline-flex shrink-0 items-center gap-4 rounded-2xl border border-white/[0.1] bg-white/[0.045] px-7 py-5 text-lg font-semibold text-slate-100 shadow-lg shadow-black/10 transition hover:border-violet-300/25 hover:bg-violet-400/[0.08]"
             >
-              <img src={technology.image} alt="" className="h-9 w-9 object-contain" loading="lazy" />
+              <img src={technology.image} alt="" className="h-11 w-11 object-contain" loading="lazy" />
               {technology.label}
             </div>
             ))}
