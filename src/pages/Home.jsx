@@ -123,7 +123,7 @@ export default function Home() {
                 <img
                   src="/images/Me.jpg"
                   alt="Profile"
-                  className="h-[24rem] w-full rounded-[2rem] object-cover object-top shadow-2xl shadow-black/30 sm:h-[30rem]"
+                  className="mx-auto h-[18rem] w-auto max-w-full rounded-[2rem] object-contain object-center shadow-2xl shadow-black/30 sm:h-[22rem]"
                 />
                 <div className="absolute bottom-6 left-6 inline-flex items-center gap-3 rounded-full bg-black/60 px-4 py-2 text-sm text-white shadow-lg shadow-black/40 backdrop-blur-md">
                   <span className="h-3.5 w-3.5 rounded-full bg-emerald-400" />
