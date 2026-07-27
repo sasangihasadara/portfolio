@@ -2,13 +2,13 @@ import React from 'react'
 import { skillGroups } from '../data/portfolioData'
 
 const stack = [
-  { label: 'HTML / CSS', icon: 'code-2', tone: 'text-orange-300' },
-  { label: 'React', icon: 'atom', tone: 'text-cyan-300' },
-  { label: 'Node.js', icon: 'braces', tone: 'text-emerald-300' },
-  { label: 'PHP', icon: 'file-code-2', tone: 'text-violet-300' },
-  { label: 'MySQL', icon: 'database', tone: 'text-sky-300' },
-  { label: 'Kotlin', icon: 'smartphone', tone: 'text-fuchsia-300' },
-  { label: 'Figma', icon: 'figma', tone: 'text-rose-300' },
+  { label: 'HTML / CSS', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
+  { label: 'React', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+  { label: 'Node.js', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+  { label: 'PHP', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' },
+  { label: 'MySQL', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+  { label: 'Kotlin', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg' },
+  { label: 'Figma', image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
 ]
 
 function SkillPanel({ group, groupIndex }) {
@@ -74,16 +74,18 @@ export default function Skills() {
           </p>
         </div>
 
-        <div className="relative mt-10 flex flex-wrap justify-center gap-3">
-          {stack.map((technology) => (
+        <div className="skills-marquee relative mt-12" aria-label="Technologies I work with">
+          <div className="skills-marquee-track">
+            {[...stack, ...stack].map((technology, index) => (
             <div
-              key={technology.label}
-              className="group inline-flex items-center gap-2 rounded-xl border border-white/[0.07] bg-white/[0.035] px-3.5 py-2.5 text-xs font-semibold text-slate-300 shadow-lg shadow-black/10 transition hover:-translate-y-1 hover:border-violet-300/25 hover:bg-violet-400/[0.08] sm:px-4"
+              key={`${technology.label}-${index}`}
+              className="skills-marquee-item group inline-flex shrink-0 items-center gap-3 rounded-2xl border border-white/[0.09] bg-white/[0.045] px-5 py-4 text-base font-semibold text-slate-100 shadow-lg shadow-black/10 transition hover:border-violet-300/25 hover:bg-violet-400/[0.08] sm:px-6"
             >
-              <i data-lucide={technology.icon} className={`h-4 w-4 ${technology.tone}`} />
+              <img src={technology.image} alt="" className="h-9 w-9 object-contain" loading="lazy" />
               {technology.label}
             </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         <div className="relative mt-12 grid gap-5 md:grid-cols-2">

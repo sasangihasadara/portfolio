@@ -151,6 +151,37 @@ body::before {
   background-color: rgba(12, 18, 42, 0.9);
 }
 
+.skills-marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.skills-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 0.75rem;
+  animation: skillsMarquee 26s linear infinite;
+}
+
+.skills-marquee:hover .skills-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes skillsMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 0.375rem));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skills-marquee-track {
+    animation: none;
+  }
+}
+
 .skill-card:hover .skill-fill {
   width: var(--skill-hover-width);
   filter: brightness(1.08);
