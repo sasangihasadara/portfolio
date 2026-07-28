@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 
-export default function LiveBackground() {
+export default function LiveBackground({ theme }) {
   const canvasRef = useRef(null)
 
   useEffect(() => {
@@ -38,7 +38,8 @@ export default function LiveBackground() {
 
           if (dist < 120) {
             ctx.beginPath()
-            ctx.strokeStyle = `rgba(100,140,255,${0.09 * (1 - dist / 120)})`
+            const lineColor = theme === 'light' ? '71, 85, 105' : '100, 140, 255'
+            ctx.strokeStyle = `rgba(${lineColor},${(theme === 'light' ? 0.065 : 0.09) * (1 - dist / 120)})`
             ctx.lineWidth = 0.5
             ctx.moveTo(stars[i].x, stars[i].y)
             ctx.lineTo(stars[j].x, stars[j].y)
@@ -51,7 +52,8 @@ export default function LiveBackground() {
         const alpha = 0.4 + 0.6 * Math.abs(Math.sin(t * star.speed + star.phase))
         ctx.beginPath()
         ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(180,200,255,${alpha})`
+        const starColor = theme === 'light' ? '100, 116, 139' : '180, 200, 255'
+        ctx.fillStyle = `rgba(${starColor},${alpha * (theme === 'light' ? 0.42 : 1)})`
         ctx.fill()
       })
 
@@ -64,7 +66,7 @@ export default function LiveBackground() {
       cancelAnimationFrame(raf)
       window.removeEventListener('resize', resize)
     }
-  }, [])
+  }, [theme])
 
   return (
     <div className="pointer-events-none fixed inset-0 z-0" aria-hidden="true">

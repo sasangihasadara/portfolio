@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
 import LiveBackground from './components/LiveBackground'
 import Home from './pages/Home'
@@ -11,15 +11,27 @@ import Contact from './pages/Contact'
 import Footer from './components/Footer'
 
 export default function App() {
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = window.localStorage.getItem('portfolio-theme')
+    return savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark'
+  })
+
   useEffect(() => {
     if (window.emailjs && window.emailjs.init) window.emailjs.init('h7l3hvKInz5qNnRRT')
     if (window.lucide && window.lucide.createIcons) window.lucide.createIcons()
   }, [])
 
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme
+    window.localStorage.setItem('portfolio-theme', theme)
+  }, [theme])
+
+  const toggleTheme = () => setTheme((currentTheme) => (currentTheme === 'dark' ? 'light' : 'dark'))
+
   return (
     <div className="min-h-screen text-white">
-      <LiveBackground />
-      <Navbar />
+      <LiveBackground theme={theme} />
+      <Navbar theme={theme} onThemeToggle={toggleTheme} />
       <main className="relative z-10 pt-20">
         <div id="home"><Home /></div>
         <div id="about"><About /></div>

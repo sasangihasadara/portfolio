@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <footer className="mt-12 border-t border-white/10 bg-[#050816]/90 py-12 backdrop-blur-xl">
+    <footer className="site-footer mt-12 border-t border-white/10 bg-[#050816]/90 py-12 backdrop-blur-xl">
       <div className="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-[1.2fr_0.8fr] md:items-end">
         <div className="max-w-2xl">
           <p className="mt-3 text-2xl font-semibold text-white md:text-3xl">
